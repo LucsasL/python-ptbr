@@ -1,3 +1,3 @@
-nome = input ('Qual o seu nome?')
+msg = input ('Olá, Mundo!')
 
-print ('Bem vindo, ', nome, '! Prazer em te conhecer!')
+print(msg)
