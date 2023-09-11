@@ -1,6 +1,6 @@
 Content = input('Digite algo: ')
 
-print('O tipo primitivo desse calor é ', type(Content))
+print('O tipo primitivo desse valor é ', type(Content))
 
 print('Só tem espaços? ', Content.isspace())
 
