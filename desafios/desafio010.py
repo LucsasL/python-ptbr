@@ -1,4 +1,4 @@
 reais = float(input('Quantos reais você tem?: R$'))
 dol = float(reais / 5.20)
 
-print('Você pode ter US${}, com essa quantia de dinheiro.'.format(dol))
+print('Com R${:.2f} vocé pode comprar US${:.2f}.'.format(reais, dol))
