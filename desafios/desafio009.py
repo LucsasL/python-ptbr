@@ -1,0 +1,13 @@
+n = int(input('Digite um número: '))
+n1 = float(n * 1)
+n2 = float(n * 2)
+n3 = float(n * 3)
+n4 = float(n * 4)
+n5 = float(n * 5)
+n6 = float(n * 6)
+n7 = float(n * 7)
+n8 = float(n * 8)
+n9 = float(n * 9)
+n10 = float(n * 10)
+
+print('>>> N * 1 = {}\n>>> N * 2 = {}\n>>> N * 3 = {}\n>>> N * 4 = {}\n>>> N * 5 = {}\n>>> N * 6 = {}\n>>> N * 7 = {}\n>>> N * 8 = {}\n>>> N * 9 = {}\n>>> N * 10 = {}\n'.format(n1, n2, n3, n4, n5, n6, n7, n8, n9, n10))
