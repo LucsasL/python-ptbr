@@ -1,6 +1,6 @@
+lar = float(input('Qual a largura de sua parede? [M]: '))
 alt = float(input('O quão alta é sua parede? [M]: '))
-lar = float(input('Quantos comprimentos? [M]: '))
 area = alt * lar
-QuantL = (area / 2)
+QuantL = float(area / 2)
 
-print('A área de sua parede é de {}M. Serão necessárias {} litros de tinta para pinta-la completamente.'.format(area, QuantL))
+print('>>> As dimensões de sua parede são {}x{}, tendo área de {}m². Serão necessários {} litros de tinta para pinta-la completamente.'.format(lar, alt, area, QuantL))
