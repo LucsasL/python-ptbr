@@ -1,11 +1,15 @@
-from random import randint
+from random import choice
 
-Paulo = 1
+aluno1 = str(input('Primeiro aluno: '))
 
-Julia = 2
+aluno2 = str(input('Segundo aluno: '))
 
-Catarina = 3
+aluno3 = str(input('Terceiro aluno: '))
 
-Leonardo = 4
+aluno4 = str(input('Quarto aluno: '))
 
-print('Dos alunos selecionados, {} terá de apagar o quadro.'.format(randint(1, 4)))
+lista = [aluno1, aluno2, aluno3, aluno4]
+
+escolhido = choice(lista)
+
+print('Dos alunos selecionados, {} terá de apagar o quadro.'.format(escolhido))
