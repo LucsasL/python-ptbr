@@ -1,9 +1,11 @@
+from math import radians, sin, cos, tan
+
 ang = float(input('Digite um ângulo: '))
 
-sen = ang / 2
+sen = sin(radians(ang))
 
-cos = ang / 2
+cos = cos(radians(ang))
 
-tan = ang 
+tan =  tan(radians(ang))
 
-print('No ângulo de {} o seno é igual a {}, o cosseno igual a {} e a tangente igual a {}.'.format(ang, sen, cos, tan))
+print('No ângulo de {} o seno é igual a {:.2f}, o cosseno igual a {:.2f} e a tangente igual a {:.2f}.'.format(ang, sen, cos, tan))
