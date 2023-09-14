@@ -1,9 +1,10 @@
-n = input('Digite seu nome: ')
+n = str(input('Digite seu nome completo: '))
+print('Analisando seu nome...')
 
-print('>>> ', n.upper(), '\n')
+print('>>> Seu nome em maiúsculo é {}.\n'.format(n.upper))
 
-print('>>> ', n.lower(), '\n')
+print('>>> Seu nome em minúsculo é {}.\n'.format(n.lower()))
 
-print('>>> ', len(n) - n.count(' '), '\n')
+print('>>> Seu nome tem no total {} caracteres.\n'.format(len(n) - n.count(' ')))
 
-print('>>> ', len(n.split()), '\n')
+print('>>> Seu primeiro nome tem {} caracteres.\n'.format(n.find(' ')))
