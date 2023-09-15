@@ -1,8 +1,8 @@
 a = float(input('Digite o 1° número: '))
 
-b = float(inpur('Digite o 2° número: '))
+b = float(input('Digite o 2° número: '))
 
-c = float(inpur('Digite o 3° número: '))
+c = float(input('Digite o 3° número: '))
 
 maior = a
 # Número maior
