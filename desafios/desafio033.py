@@ -1,14 +1,24 @@
-num = float(input('Digite o 1° número: '))
+a = float(input('Digite o 1° número: '))
 
-maior = 0
+b = float(inpur('Digite o 2° número: '))
 
-if num >= maior:
-    maior = num
+c = float(inpur('Digite o 3° número: '))
 
-menor = maior
+maior = a
+# Número maior
+if b > a and b > c:
+    maior = b
 
-if num < menor:
-    menor = num
+if c > a and c > b:
+    maior = c
+
+menor = a
+# Número menor
+if b < a and b < c:
+    menor = b
+
+if c < a and c < b:
+    menor = c
 
 print('>>> O maior número é o {:.2f}.'.format(maior))
 
