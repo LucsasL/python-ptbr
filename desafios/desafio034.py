@@ -5,4 +5,7 @@ if sal > 1250.00:
 else:
     Nsal = sal + sal * 0.15
 
-print('>>> O novo salário será de R${:.2f}.'.format(Nsal))
+cores = {'limpa': '\033[m',
+         'verde': '\033[1;32m'}
+
+print('>>> O novo salário será de {}R${:.2f}.{}'.format(cores['verde'], Nsal, cores['limpa']))
