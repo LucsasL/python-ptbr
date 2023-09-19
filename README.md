@@ -9,11 +9,11 @@ E como não podia ser diferente, o Curso que usarei para aprender a parte básic
 
 ## Prática
 
-- [Exercícios](https://github.com/LucsasL/python-ptbr/tree/main/desafios)
+- [Exercícios](https://github.com/LucsasL/python-ptbr/tree/main/scripts-python)
 
 ## Desafios
 
-- [Desafios](https://github.com/LucsasL/python-ptbr/tree/main/scripts-python)
+- [Desafios](https://github.com/LucsasL/python-ptbr/tree/main/desafios)
 
 ## Atualizações
 
