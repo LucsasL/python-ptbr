@@ -3,7 +3,7 @@ forms = {'limpa': '\033[m',
          'roxo': '\033[1;35m'}
 
 print('{}-=-{}'.format(forms['roxo'], forms['limpa']) * 20)
-print('Conversor de números')
+print('{}Conversor de números{}'.format(forms['bold'], forms['limpa']))
 print('{}-=-{}'.format(forms['roxo'], forms['limpa']) * 20)
 
 num = int(input('Digite um número inteiro: '))
