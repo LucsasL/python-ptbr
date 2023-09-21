@@ -23,7 +23,7 @@ pag = int(input('Digite a forma de pagamento: '))
 
 if pag == 1:
     pag = 'À vista'
-    print('>>> Método selecionado: {}{};{} Você deverá pagar: {}R${:.2f}'.format(forms['azul'], pag, forms['limpa'], forms['vermelho'], prod))
+    print('>>> Método selecionado: {}{};{} Você deverá pagar: {}R${:.2f}'.format(forms['azul'], pag, forms['limpa'], forms['vermelho'], (prod - (prod * 0.1))))
 elif pag == 2:
     pag = 'À vista no cartão'
     prod = prod - (prod * 0.05)
@@ -36,3 +36,5 @@ else:
     pag = '{}x no cartão'.format(parc)
     prod = prod + (prod * 0.2)
     print('>>> Método selecionado: {}{};{} Você deverá pagar: {}R${:.2f}{} ao todo. Sendo {}R${:.2f}{} em {} parcelas.'.format(forms['azul'], pag, forms['limpa'], forms['vermelho'], prod, forms['limpa'], forms['vermelho'], (prod / parc), forms['limpa'], parc))
+
+    print(forms['limpa'])
