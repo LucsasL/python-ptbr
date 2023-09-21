@@ -31,10 +31,12 @@ elif pag == 2:
 elif pag == 3:
     pag = '2x no cartão'
     print('>>> Método selecionado: {}{};{} Você deverá pagar: {}R${:.2f}{}. Sendo {}R${:.2f}{} em 2 parcelas.'.format(forms['azul'], pag, forms['limpa'], forms['vermelho'], prod, forms['limpa'], forms['vermelho'], (prod / 2), forms['limpa']))
-else:
+elif pag == 3:
     parc = int(input('Quantas parcelas?: '))
     pag = '{}x no cartão'.format(parc)
     prod = prod + (prod * 0.2)
     print('>>> Método selecionado: {}{};{} Você deverá pagar: {}R${:.2f}{} ao todo. Sendo {}R${:.2f}{} em {} parcelas.'.format(forms['azul'], pag, forms['limpa'], forms['vermelho'], prod, forms['limpa'], forms['vermelho'], (prod / parc), forms['limpa'], parc))
+else:
+    print('{}OPÇÃO INVÁLIDA{} de pagamento. Tente novamente.'.format(forms['vermelho'], forms['limpa']))
 
     print(forms['limpa'])
