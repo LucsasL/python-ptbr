@@ -11,10 +11,12 @@ sal = float(input('{}Qual o valor do seu salário?: {}R$'.format(cores['limpa'],
 
 ano = int(input('{}Em quantos anos você pretende pagar tudo?: '.format(cores['limpa'])))
 
-empre = casa / ano * 12
+empre = casa / (ano * 12)
+
+print('VALOR DAS PRESTAÇÕES {}R${:.2f}.{}'.format(cores['vermelho'], empre, cores['limpa']))
 
 # Não precisa de condicionais aninhadas
 if empre <= sal * 0.3:
     print('{}Empréstimo realizado!{}'.format(cores['verde'], cores['limpa']))
 else:
-    print('{}Não será possível realizar o empréstimo!{} O valor das prestações ultrapassam {}30%{} do salário ({:.2f}).'.format(cores['vermelho'], cores['limpa'], cores['amarelo'], cores['limpa'], (sal * 0.3)))
+    print('{}Não será possível realizar o empréstimo!{} O valor das prestações ({:.2f}) ultrapassam {}30%{} do salário ({:.2f}).'.format(cores['vermelho'], cores['limpa'], empre, cores['amarelo'], cores['limpa'], (sal * 0.3)))
