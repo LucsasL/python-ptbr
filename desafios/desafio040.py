@@ -8,8 +8,6 @@ print('{}-=-{}'.format(forms['roxo'], forms['limpa']) * 20)
 print('Teste para exame de escola')
 print('{}-=-{}'.format(forms['roxo'], forms['limpa']) * 20)
 
-aluno = str(input('Digite o nome do aluno: '))
-
 n1 = float(input('Digite a primeira nota: '))
 
 n2 = float(input('Digite a segunda nota: '))
