@@ -1,5 +1,7 @@
 from random import randint
 
+from time import sleep
+
 forms = {'limpa': '\033[m',
          'bold': '\033[1m',
          'roxo': '\033[1;35m',
@@ -23,44 +25,95 @@ jogador = bool
 
 comp = randint(1, 3)
 
+print('JO')
+sleep(.8)
+print('KEN')
+sleep(.8)
+print('PÔ!!')
+sleep(.8)
+
 # Jogo acontecendo
-if comp == 1 and jog == 2:
-    jogador = True
-    comp = 'PEDRA'
+if comp == 1:
 
-elif comp == 1 and jog == 3:    
-    jogador = False
-    comp = 'PEDRA'
+    if jog == 1:
+        comp = 'PEDRA'
+        jog = int(input('>>> {}EMPATE!{} O computador usou {}{}.{} Jogue de novo: '.format(forms['amarelo'], forms['limpa'], forms['amarelo'], comp, forms['limpa'])))
 
-elif comp == 1 and jog == 1:
-    comp = 'PEDRA'
-    jog = int(input('>>> {}EMPATE!{} O computador usou {}{}.{} Jogue de novo: '.format(forms['amarelo'], forms['limpa'], forms['amarelo'], comp, forms['limpa'])))
+        print('JO')
+        sleep(.8)
+        print('KEN')
+        sleep(.8)
+        print('PÔ!!')
+        sleep(.8)
 
-elif comp == 2 and jog == 3:
-    jogador = True
-    comp = 'PAPEL'
+    elif jog == 2:
+        jogador = True
+        comp = 'PEDRA'
 
-elif comp == 2 and jog == 1:
-    jogador = False
-    comp = 'PAPEL'
+    elif jog == 3:    
+        jogador = False
+        comp = 'PEDRA'
 
-elif comp == 2 and jog == 2:
-    comp = 'PAPEL'
-    jog = int(input('>>> {}EMPATE!{} O computador usou {}{}.{} Jogue de novo: '.format(forms['amarelo'], forms['limpa'], forms['amarelo'], comp, forms['limpa'])))
+    else:
+        print('Jogada inválida, tente novamente.')
 
-elif comp == 3 and jog == 1:
-    jogador = True
-    comp = 'TESOURA'
+elif comp == 2:
 
-elif comp == 3 and jog == 2:
-    jogador = False
-    comp = 'TESOURA'
+    if jog == 1:
+        jogador = False
+        comp = 'PAPEL'
 
-else:
-    comp = 'TESOURA'
-    jog = int(input('>>> {}EMPATE!{} O computador usou {}{}.{} Jogue de novo: '.format(forms['amarelo'], forms['limpa'], forms['amarelo'], comp, forms['limpa'])))
+    elif jog == 2:
+        comp = 'PAPEL'
+        jog = int(input('>>> {}EMPATE!{} O computador usou {}{}.{} Jogue de novo: '.format(forms['amarelo'], forms['limpa'], forms['amarelo'], comp, forms['limpa'])))
+
+        print('JO')
+        sleep(.8)
+        print('KEN')
+        sleep(.8)
+        print('PÔ!!')
+        sleep(.8)
+    
+    elif jog == 3:
+        jogador = True
+        comp = 'PAPEL'
+
+    else:
+        print('Jogada inválida, tente novamente.')
+    
+elif comp == 3:
+
+    if jog == 1:
+        jogador = True
+        comp = 'TESOURA'
+
+    elif jog == 2:
+        jogador = False
+        comp = 'TESOURA'
+
+    elif jog == 3:
+        comp = 'TESOURA'
+        jog = int(input('>>> {}EMPATE!{} O computador usou {}{}.{} Jogue de novo: '.format(forms['amarelo'], forms['limpa'], forms['amarelo'], comp, forms['limpa'])))
+
+        print('JO')
+        sleep(.8)
+        print('KEN')
+        sleep(.8)
+        print('PÔ!!')
+        sleep(.8)
+
+    else:
+        print('Jogada inválida, tente novamente.')
 
 # Verifica o estado do jogo
+
+if jog == 1:
+    print('Jogada: {}'.format(jog))
+elif jog == 2:
+    print('Jogada: {}'.format(jog))
+else:
+    print('Jogada: {}'.format(jog))
+
 if jogador == False:
     print('>>> {}Você perdeu!{} O computador usou {}{}.{}\n'.format(forms['vermelho'], forms['limpa'], forms['amarelo'], comp, forms['limpa']))
 else:
