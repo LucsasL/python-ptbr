@@ -15,7 +15,7 @@ elif idade <= 14:
     print('Atleta {}INFANTIL.{}'.format(forms['amarelo'], forms['limpa']))
 elif idade <= 19:
     print('Atleta {}JUNIOR.{}'.format(forms['amarelo'], forms['limpa']))
-elif idade == 20:
+elif idade <= 25:
     print('Atleta {}SÊNIOR.{}'.format(forms['amarelo'], forms['limpa']))
 else:
     print('Atleta {}MASTER.{}'.format(forms['amarelo'], forms['limpa']))
