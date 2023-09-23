@@ -4,10 +4,7 @@ palavras = frase.split()
 
 junto = ''.join(palavras)
 
-inv = ''
-
-for letra in range(len(junto) - 1, -1, -1):
-    inv += junto[letra]
+inv = junto[::-1]
 
 print('A frase digitada: {} invertida é {}.'.format(frase, inv))
 
