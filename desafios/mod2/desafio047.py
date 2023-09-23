@@ -6,6 +6,7 @@ print('{}-=-{}'.format(forms['roxo'], forms['limpa']) * 20)
 print('{}{:^5}{}'.format(forms['bold'], 'Números pares', forms['limpa']))
 print('{}-=-{}'.format(forms['roxo'], forms['limpa']) * 20)
 
-for c in range(0, 51, 2):
-    print('... ', c)
-print('... FIM!')
+print('... ', end='')
+for c in range(2, 51, 2):
+    print(c, end=', ')
+print('\n... FIM!')
