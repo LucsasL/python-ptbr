@@ -6,12 +6,9 @@ term = int(input('Digite o primeiro termo: '))
 
 raz = int(input('Digite a razão: '))
 
-PA = 0
+décimo = term + (10 - 1) * raz
 
-print(term, end=' > ')
-
-for c in range(0, 9):
-    PA = PA + raz
-    print(PA, end=' > ')
+for c in range(term, décimo + raz, raz):
+    print(c, end=' > ')
 
 print('FIM')
