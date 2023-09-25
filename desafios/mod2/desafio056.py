@@ -20,7 +20,7 @@ for c in range(1, 5):
 
     maioridade = idade
 
-midade = midade / c
+midade /= c
 
 print('\n... MÉDIA DE IDADE ENTRE AS PESSOAS: {}'.format(midade))
 print('... NOME DO HOMEM MAIS VELHO TEM {} ANOS E É O {}'.format(maioridade, nomem))
