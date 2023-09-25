@@ -6,9 +6,9 @@ maioridade = 0
 
 for c in range(1, 5):
     print('--- {}° PESSOA ---'.format(c))
-    nome = str(input('\n>>> Digite o nome da {}° pessoa: '.format(c)))
+    nome = str(input('\n>>> Digite o nome da {}° pessoa: '.format(c))).strip()
     idade = int(input('>>> Digite a idade da {}° pessoa: '.format(c)))
-    sexo = str(input('>>> Digite o sexo da {}° pessoa [M / F]: '.format(c)).upper())
+    sexo = str(input('>>> Digite o sexo da {}° pessoa [M / F]: '.format(c)).upper()).strip()
 
     midade += idade
 
