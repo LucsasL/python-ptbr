@@ -25,5 +25,3 @@ elif contmai < c and contmen == 1:
 
 else:
     print('... Ninguém listado está na maioridade.')
-
-# Em desenvolvimento
