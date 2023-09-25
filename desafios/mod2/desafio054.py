@@ -13,9 +13,11 @@ for c in range(1, 8):
     else:
         print('... NÃO está na MAIORIDADE')
 
-if contmai == c:
+if contmai == c and:
     print('... Todas as pessoas listadas estão na maioridade.')
 elif contmai > 0 and contmai < c:
     print('... Das pessoas digitadas, apenas {} está(ão) na maioridade'.format(contmai))
 else:
     print('... Ninguém listado está na maioridade.')
+
+# Em desenvolvimento
