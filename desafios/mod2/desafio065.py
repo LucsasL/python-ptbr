@@ -2,6 +2,8 @@ fim = False
 
 quantnum = m = maior = 0
 
+erro = 'ERROR'
+
 menor = 999999999999999999999
 
 while fim != True:
@@ -27,12 +29,17 @@ while fim != True:
     elif resp == 'S':
         num = int(input('>>> Digite outro número: '))
     else:
-        while resp != 'S' or 'N':
-            resp = str(input('>>> O valor digitado é invalido! Tente novamente [S / N]: ')).upper().strip()
+        while erro != 'S' or 'N':
+            erro = str(input('>>> O valor digitado é inválido! Tente novamente [S / N]: ')).upper().strip()
 
-            if resp == 'N':
+            if erro == 'N':
                 fim = True
+                erro = 'N'
+            elif erro == 'S':
+                erro = 'S'
 
 m = m / quantnum
 
 print('... A média dos números digitados é {:.2f}.'.format(m))
+
+print('... O maior número foi o {} e o menor número foi o {}.'.format(maior, menor))
