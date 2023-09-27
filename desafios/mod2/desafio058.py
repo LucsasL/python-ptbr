@@ -14,18 +14,15 @@ answer = int(input('>>> Em que número eu pensei?: ')) # Jogador tenta adivinhar
 
 num = randint(0, 10) # faz o computador pensar
 
-tent = 0
+tent = 1
 
 print('PROCESSANDO...')
 sleep(1.5)
 
 if answer == num:
     print('>>> {}PARABÉNS!{} Você conseguiu me vencer!'.format(cores['verde'], cores['limpa']))
-    tent += 1
     print('TENTATIVAS: {}'.format(tent))
-else:
-    tent = 1
-    
+else:    
     while answer != num:
         answer = int(input('>>> {}GANHEI.{} Eu pensei no número {} e não no {}. Tente novamente: '.format(cores['vermelho'], cores['limpa'],num, answer)))
 
