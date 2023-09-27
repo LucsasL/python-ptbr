@@ -2,7 +2,7 @@ fim = False
 
 quantnum = m = maior = 0
 
-error = False
+error = 'ERROR'
 
 menor = 999999999999999999999
 
@@ -32,6 +32,13 @@ while fim != True:
 
     elif resp == 'S':
         fim = False
+
+    else:
+        while resp not in 'SN':
+            resp = str(input('>>> O valor digitado é inválido! Tente novamente [S / N]: ')).upper().strip()
+
+        if resp == 'N':
+            fim = True
 
 m = m / quantnum
 
