@@ -1,7 +1,6 @@
-sexo = 'Indefinido'
+sexo = str(input('>>> Digite o sexo [M / F]: ')).upper()[0].strip()
 
 while sexo not in 'MmFf':
-    sexo = str(input('>>> Digite o sexo [M / F]: ')).upper()[0].strip()
-    if sexo not in 'MmFf':
-        print('... Sexo inválido! Digite novamente!')
-print('Sexo {} registrado com sucesso'.format(sexo))
+    sexo = str(input('... Sexo inválido! Digite novamente [M / F]: '))
+    
+print('... Sexo {} registrado com sucesso'.format(sexo))
