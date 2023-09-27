@@ -2,41 +2,36 @@ fim = False
 
 quantnum = m = maior = 0
 
-erro = 'ERROR'
+error = False
 
 menor = 999999999999999999999
 
 while fim != True:
+    # Diferentes formas de pedir um número
     if quantnum == 0:
         num = int(input('>>> Digite um número: '))
     else:
         num = int(input('>>> Digite outro número: '))
 
-    resp = str(input('>>> Quer continuar a adicionar números? [S / N]: ')).upper().strip()
-
     quantnum += 1
 
     m += num
 
+    # Verificação de números maiores e menores
     if num > maior:
         maior = num
 
     if num < menor:
         menor = num
 
+    resp = str(input('>>> Quer continuar a adicionar números? [S / N]: ')).upper().strip()
+
+    # Analise da resposta sobre adição de mais números
     if resp == 'N':
         fim = True
-    elif resp == 'S':
-        num = int(input('>>> Digite outro número: '))
-    else:
-        while erro != 'S' or 'N':
-            erro = str(input('>>> O valor digitado é inválido! Tente novamente [S / N]: ')).upper().strip()
 
-            if erro == 'N':
-                fim = True
-                erro = 'N'
-            elif erro == 'S':
-                erro = 'S'
+    elif resp == 'S':
+        fim = False
 
 m = m / quantnum
 
