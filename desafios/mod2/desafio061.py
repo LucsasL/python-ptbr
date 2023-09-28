@@ -1,14 +1,18 @@
-print('=' * 23)
-print('{:^}'.format('10 PRIMEIROS TERMOS PA'))
-print('=' * 23)
+print('=' * 30)
+print('{:^30}'.format('10 PRIMEIROS TERMOS PA'))
+print('=' * 30)
 
-term = int(input('Digite o primeiro termo: '))
+primeiro = int(input('Digite o primeiro termo: '))
 
 raz = int(input('Digite a razão: '))
 
-décimo = term + (10 - 1) * raz
+termo = primeiro
 
-for c in range(term, décimo + raz, raz):
-    print(c, end=' > ')
+cont = 1
+
+while cont <= 10:
+    print('{} > '.format(termo), end='')
+    termo += raz
+    cont += 1
 
 print('FIM')
