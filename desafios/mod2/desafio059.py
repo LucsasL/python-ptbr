@@ -20,7 +20,7 @@ while escolha != 5:
     if analise > 1:
         sleep(2)
 
-    print('\n-------------------')
+    print('\n--------------------')
     print('[1] {:20}'.format('Somar'))
     print('[2] {:20}'.format('Multiplicar  '))
     print('[3] {:20}'.format('Mostrar Maior'))
