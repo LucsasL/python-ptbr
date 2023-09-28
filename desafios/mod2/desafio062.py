@@ -1,14 +1,54 @@
-print('=' * 23)
-print('{:^}'.format('10 PRIMEIROS TERMOS PA'))
-print('=' * 23)
+print('=' * 30)
+print('{:^30}'.format('10 PRIMEIROS TERMOS PA'))
+print('=' * 30)
 
-term = int(input('Digite o primeiro termo: '))
+fim = False
 
-raz = int(input('Digite a razão: '))
+adicao = 0
 
-décimo = term + (10 - 1) * raz
+while fim == False:
+    if adicao == 0:
+        primeiro = int(input('>>> Digite o primeiro termo: '))
 
-for c in range(term, décimo + raz, raz):
-    print(c, end=' > ')
+    raz = int(input('>>> Digite a razão: '))
 
-print('FIM')
+    termo = primeiro
+
+    cont = 1
+
+    if adicao == 0:
+        while cont <= 10:
+            print('{} > '.format(termo), end='')
+            termo += raz
+            cont += 1
+        
+        PA = termo
+
+    else:
+        while cont <= 10:
+            print('{} > '.format(PA), end='')
+            PA += raz
+            cont += 1
+        
+        PA = PA
+
+    print('FIM')
+
+    resp = str(input('\n>>> Quer continuar a somar números na PA? [S / N]:')).upper()[0].strip()
+
+    if resp == 'S':
+        fim = False
+        adicao += 1
+    elif resp == 'N':
+        fim = True
+    else:
+        while resp not in 'SN':
+            resp = str(input('\n>>> Opção inválida! Tente novamnente [S / N]: ')).upper()[0].strip()
+
+        if resp == 'N':
+            fim = True
+        elif resp == 'S':
+            adicao += 1
+
+print('\n... adições extras: {}.'.format(adicao))
+print('\n... Finalizando programa...')
