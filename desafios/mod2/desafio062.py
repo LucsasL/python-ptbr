@@ -1,54 +1,28 @@
 print('=' * 30)
-print('{:^30}'.format('10 PRIMEIROS TERMOS PA'))
+print('{:^30}'.format('SUPER POGRESSÃO ARITMÉTICA'))
 print('=' * 30)
 
-fim = False
+primeiro = int(input('>>> Digite o primeiro termo: '))
 
-adicao = 0
+raz = int(input('>>> Digite a razão: '))
 
-while fim == False:
-    if adicao == 0:
-        primeiro = int(input('>>> Digite o primeiro termo: '))
+termo = primeiro
 
-    raz = int(input('>>> Digite a razão: '))
+cont = 1
 
-    termo = primeiro
+while cont <= 10:
+    print('{} > '.format(termo), end='')
+    termo += raz
+    cont += 1
 
-    cont = 1
+print('FIM')
 
-    if adicao == 0:
-        while cont <= 10:
-            print('{} > '.format(termo), end='')
-            termo += raz
-            cont += 1
-        
-        PA = termo
+add = int(input('>>> Quantos termos a mais quer adicionar?: '))
 
-    else:
-        while cont <= 10:
-            print('{} > '.format(PA), end='')
-            PA += raz
-            cont += 1
-        
-        PA = PA
+while add == 0:
+    print('{} > '.format(termo), end='')
+    termo += raz
 
-    print('FIM')
+print('FIM')
 
-    resp = str(input('\n>>> Quer continuar a somar números na PA? [S / N]:')).upper()[0].strip()
-
-    if resp == 'S':
-        fim = False
-        adicao += 1
-    elif resp == 'N':
-        fim = True
-    else:
-        while resp not in 'SN':
-            resp = str(input('\n>>> Opção inválida! Tente novamnente [S / N]: ')).upper()[0].strip()
-
-        if resp == 'N':
-            fim = True
-        elif resp == 'S':
-            adicao += 1
-
-print('\n... adições extras: {}.'.format(adicao))
 print('\n... Finalizando programa...')
