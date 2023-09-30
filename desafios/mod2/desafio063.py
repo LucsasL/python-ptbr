@@ -1,3 +1,6 @@
+print('-=-' * 10)
+print('{:^30}'.format('SEQUÊNCIA DE FIBONACCI'))
+print('-=-' * 10)
 quant = int(input('>>> Digite a quantidade de termos a ser mostrado: '))
 
 fib = 0
