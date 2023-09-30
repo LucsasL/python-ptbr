@@ -6,9 +6,9 @@ num = 0
 
 while num != 999:
     if quantnum == 0:
-        num = int(input('Digite um número: '))
+        num = int(input('Digite um número [999 para parar]: '))
     else:
-        num = int(input('Digite outro número: '))
+        num = int(input('Digite outro número [999 para parar]: '))
 
     if num != 999:
         quantnum += 1
