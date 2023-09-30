@@ -1,10 +1,8 @@
 fim = False
 
-quantnum = m = maior = 0
+quantnum = m = 0
 
 error = 'ERROR'
-
-menor = 999999999999999999999
 
 while fim != True:
     # Diferentes formas de pedir um número
@@ -18,11 +16,14 @@ while fim != True:
     m += num
 
     # Verificação de números maiores e menores
-    if num > maior:
-        maior = num
+    if quantnum == 1:
+        maior = menor = num
+    else:
+        if num > maior:
+            maior = num
 
-    if num < menor:
-        menor = num
+        if num < menor:
+            menor = num
 
     resp = str(input('>>> Quer continuar a adicionar números? [S / N]: ')).upper().strip()
 
@@ -42,6 +43,6 @@ while fim != True:
 
 m = m / quantnum
 
-print('... A média dos números digitados é {:.2f}.'.format(m))
+print('\n... Você digitou {} números e a média entre eles é {:.2f}.'.format(quantnum, m))
 
-print('... O maior número foi o {} e o menor número foi o {}.'.format(maior, menor))
+print('\n... O maior número foi o {} e o menor número foi o {}.'.format(maior, menor))
