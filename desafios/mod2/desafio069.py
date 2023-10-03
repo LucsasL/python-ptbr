@@ -2,15 +2,9 @@ print('=' * 30)
 print('ANALISE DE DADOS')
 print('=' * 30)
 
-resp = 'DEFINED'
-
 pmaior = nump = h = mm20 = 0
 
 while True:
-    # Quebra de laço caso haja erro de digitação e não haja mais pessoas a cadastrar
-    if resp == 'N':
-        break
-    
     nump += 1
 
     print(f'{nump}° PESSOA')
@@ -34,9 +28,7 @@ while True:
         h += 1
 
     # Testa possibilidade de erro ao digitar
-    if resp == 'N':
-        break
-    elif resp != 'S':
+    if resp != 'S':
         if resp == 'N':
             break
 
@@ -45,5 +37,8 @@ while True:
 
             if resp == 'N':
                 break
+    
+    if resp == 'N':
+        break
 
 print('''\n... Dos dados digitados, podemos concluir que {} pesssoas tem mais de 18 anos, {} pessoas são homens e {} das mulheres digitadas tem menos de 20 anos.'''.format(pmaior, h, mm20))

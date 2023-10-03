@@ -1,11 +1,6 @@
 maismil = total = barato = cont = 0
 
-resp = '...'
-
 while True:
-    if resp == 'N':
-        break
-
     nomeP = str(input('>>> Digite o nome o produto: '))
 
     preço = float(input('>>> Digite o preço do produto: R$'))
@@ -16,6 +11,7 @@ while True:
 
     if cont == 0:
         barato = preço
+        Pbar = nomeP
 
     if barato > preço:
         Pbar = nomeP
@@ -26,14 +22,15 @@ while True:
 
     cont += 1
 
+    if resp != 'S':
+        while resp not in 'SN':
+            resp = str(input('>>> Opção inválida! Digite novamente [S / N]: ')).upper()[0].strip()
+
+            if resp == 'N':
+                break
+    
     if resp == 'N':
         break
-    elif resp != 'S':
-        while True:
-            resp = str(input('>>> Opção inválida! Digite novamente [S / N]: ')).upper().strip()
-
-            if resp == 'N' or 'S':
-                break
 
 print(f'\n... O total gasto na compra será R${total:.2f}.')
 
