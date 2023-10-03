@@ -9,7 +9,7 @@ while True:
 
     preço = float(input('>>> Digite o preço do produto: R$'))
 
-    resp = str(input('>>> Adicionar mais produtos? [S / N]: ')).upper().strip()
+    resp = str(input('>>> Adicionar mais produtos? [S / N]: ')).strip().upper()
 
     total += preço
 
@@ -28,7 +28,7 @@ while True:
 
     if resp != 'S':
         while resp not in 'SN':
-            resp = str(input('>>> Opção inválida! Digite novamente [S / N]: ')).upper()[0].strip()
+            resp = str(input('>>> Opção inválida! Digite novamente [S / N]: ')).strip().upper()[0]
 
             if resp == 'N':
                 break
