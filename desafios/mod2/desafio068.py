@@ -1,10 +1,10 @@
+from random import randint
+
 forms = {'limpa': '\033[m',
          'bold': '\033[1m',
          'roxo': '\033[1;35m',
          'vermelho': '\033[31m',
          'verde': '\033[32m'}
-
-from random import randint
 
 jogven = 0
 
@@ -15,7 +15,7 @@ print('{}-=-{}'.format(forms['roxo'], forms['limpa']) * 20)
 while True:
     jog = int(input('\n>>> Digite um número: '))
 
-    PoI = str(input('>>> PAR ou ÍMPAR [P / I]: '))[0].upper().strip()
+    PoI = str(input('>>> PAR ou ÍMPAR [P / I]: ')).strip().upper()[0]
 
     comp = randint(1, 20)
 
@@ -48,7 +48,7 @@ while True:
 
     else:
         while PoI not in 'PI':
-            PoI = str(input('Valor inválido! Digite novamente [P / I]: ')).upper()[0].strip()
+            PoI = str(input('Valor inválido! Digite novamente [P / I]: ')).strip().upper()[0]
 
             s = jog + comp
 
