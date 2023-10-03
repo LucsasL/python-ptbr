@@ -47,12 +47,6 @@ while True:
         break
 
     else:
-        if PoI == 'P' and s % 2 == 1:
-            break
-
-        elif PoI == 'I' and s % 2 == 0:
-            break
-
         while PoI not in 'PI':
             PoI = str(input('Valor inválido! Digite novamente [P / I]: ')).upper()[0].strip()
 
@@ -77,6 +71,12 @@ while True:
 
             elif PoI == 'I' and s % 2 == 0:
                 break
+
+        if PoI == 'P' and s % 2 == 1:
+            break
+
+        elif PoI == 'I' and s % 2 == 0:
+            break
 
 print(f'\n... O computador jogou {comp} e você jogou {jog}, somando os números jogados temos {s}, que é {Res}.')
 
