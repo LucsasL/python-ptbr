@@ -1,5 +1,9 @@
 maismil = total = barato = cont = 0
 
+print('-' * 45)
+print('{:^45}'.format('COMPRAS NO HIPERMECADO'))
+print('-' * 45)
+
 while True:
     nomeP = str(input('>>> Digite o nome o produto: '))
 
@@ -31,6 +35,8 @@ while True:
     
     if resp == 'N':
         break
+
+print('{:^45-}'.format(' FIM DO PROGRAMA '))
 
 print(f'\n... O total gasto na compra será R${total:.2f}.')
 
