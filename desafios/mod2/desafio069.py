@@ -13,9 +13,20 @@ while True:
     # Formulário de pergunta
     idade = int(input('>>> Digite a idade: '))
 
-    sexo = str(input('>>> Digite o sexo [M / F]: ')).upper()[0].strip()
+    sexo = str(input('>>> Digite o sexo [M / F]: ')).strip().upper()[0]
 
-    resp = str(input('>>> Adicionar mais pessoas? [S / N]: ')).upper()[0].strip()
+    if sexo == 'M':
+        h += 1
+
+    # Testa possibilidade de erro ao digitar no input de sexo
+    elif sexo != 'F':
+        while sexo not in 'MF':
+            sexo = str(input('>>> Opção inválida! Digite novamente [M / F]: ')).strip().upper()[0]
+
+            if sexo == 'M':
+                h += 1
+
+    resp = str(input('>>> Adicionar mais pessoas? [S / N]: ')).strip().upper()[0]
     
     # Calcula parâmetros
     if idade > 18:
@@ -24,16 +35,13 @@ while True:
     if idade < 20 and sexo == 'F':
         mm20 += 1
 
-    if sexo == 'M':
-        h += 1
-
-    # Testa possibilidade de erro ao digitar
+    # Testa possibilidade de erro ao digitar no input de adição
     if resp != 'S':
         if resp == 'N':
             break
 
         while resp not in 'SN':
-            resp = str(input('>>> Opção inválida! Digite novamente [S / N]: ')).upper()[0].strip()
+            resp = str(input('>>> Opção inválida! Digite novamente [S / N]: ')).strip().upper()[0]
 
             if resp == 'N':
                 break
@@ -41,4 +49,8 @@ while True:
     if resp == 'N':
         break
 
-print('''\n... Dos dados digitados, podemos concluir que {} pesssoas tem mais de 18 anos, {} pessoas são homens e {} das mulheres digitadas tem menos de 20 anos.'''.format(pmaior, h, mm20))
+print(f'\n... Dos dados digitados, podemos concluir que {pmaior} pesssoas tem mais de 18 anos.')
+
+print(f'\n... {h} das pessoas são homens.')
+
+print(f'\n... E {mm20} das mulheres digitadas tem menos de 20 anos.')
