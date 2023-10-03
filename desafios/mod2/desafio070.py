@@ -13,13 +13,9 @@ while True:
 
     total += preço
 
-    if cont == 0:
+    if cont == 0 or barato > preço:
         barato = preço
         Pbar = nomeP
-
-    if barato > preço:
-        Pbar = nomeP
-        barato = preço
 
     if preço > 1000:
         maismil += 1
@@ -36,7 +32,7 @@ while True:
     if resp == 'N':
         break
 
-print('{:^45-}'.format(' FIM DO PROGRAMA '))
+print('{:-^45}'.format(' FIM DO PROGRAMA '))
 
 print(f'\n... O total gasto na compra será R${total:.2f}.')
 
