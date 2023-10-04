@@ -18,4 +18,4 @@ while cinsed == cin:
 while censed == cen:
     censed += 1
 
-print('Foram entregues {} ce')
+print('Volte sempre e tenha um bom dia!')
