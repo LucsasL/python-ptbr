@@ -2,32 +2,23 @@ from random import randint
 
 cont = maior = 0
 
-num1 = randint(0, 10)
+listanum = (randint(0, 10), randint(0, 10), randint(0, 10), randint(0, 10), randint(0, 10))
 
-num2 = randint(0, 10)
+for num in listanum:
+    print(f'... {num}', end=' ' if cont < 4 else '\n')
 
-num3 = randint(0, 10)
-
-num4 = randint(0, 10)
-
-num5 = randint(0, 10)
-
-listanum = (num1, num2, num3, num4, num5)
-
-for cont in listanum:
-    print(cont)
     if cont == 0:
-        maior = menor = listanum
+        maior = menor = num
 
-    if maior < listanum:
-        maior = listanum
+    if maior < num:
+        maior = num
 
-    if menor > listanum:
-        menor = listanum
-
+    if menor > num:
+        menor = num
+    
     cont += 1
 
-print(f'... Números sorteados: {listanum}')
+print(f'\n... Números sorteados: {listanum}')
 
 print(f'... O maior número gerado foi {maior}')
 
