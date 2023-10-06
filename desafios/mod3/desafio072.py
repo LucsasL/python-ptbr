@@ -2,12 +2,12 @@ números = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'o
 
 dig = int(input('>>> Digite um número entre 0 e 20: '))
 
-if dig <= 20 or dig < 0:
-    print(f'O número digitado foi {números[dig]}')
+if dig <= 20 and dig >= 0:
+    print(f'O número digitado foi {números[dig]}.')
 else:
     while True:
         dig = int(input('>>> Número inválido! Digite um número entre 0 e 20: '))
 
         if dig <= 20 and dig >= 0:
-            print(f'O número digitado foi {números[dig]}')
+            print(f'O número digitado foi {números[dig]}.')
             break
