@@ -1,6 +1,7 @@
-valor = float(input('>>> Digite um número: '))
+for cont in range(0, 4):
+    valor = float(input('>>> Digite um número: '))
 
-valores = (valor)
+    valores = (valor, valor, valor, valor)
 
 print(f'... O número 9 apareceu {valores} vezes.')
 
