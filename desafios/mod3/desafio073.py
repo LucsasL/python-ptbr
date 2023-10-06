@@ -20,7 +20,7 @@ while True:
     print(f'\n{forms["bold"]}{forms["azul"]}[1]{forms["bold"]} Mostrar times do Brasileirão Séria A em ordem alfabética{forms["limpa"]}')
     print(f'{forms["bold"]}{forms["azul"]}[2]{forms["bold"]} Mostrar os cincos melhores times do Brasileirão Série A{forms["limpa"]}')
     print(f'{forms["bold"]}{forms["azul"]}[3]{forms["bold"]} Mostrar os quatro piores times do Brasileirão Série A{forms["limpa"]}')
-    print(f'{forms["bold"]}{forms["azul"]}[4]{forms["bold"]} Mostrar posição da Chapecoense{forms["limpa"]}')
+    print(f'{forms["bold"]}{forms["azul"]}[4]{forms["bold"]} Mostrar posição do Palmeiras{forms["limpa"]}')
     print(f'{forms["bold"]}{forms["azul"]}[5]{forms["bold"]} Sair{forms["limpa"]}')
 
     Esc = int(input(f'\n{forms["padrao"]}>>> Escolha a demonstração da lista [1 a 5]: '))
@@ -45,8 +45,8 @@ while True:
         sleep(4)
 
     elif Esc == 4:
-        print(f'{forms["bold"]}... A Chapecoense está na posição .')
-        print(f'... {Times}')
+        print(f'{forms["bold"]}... O Palmeiras está na posição {Times.index("Palmeiras")}.')
+
         print(f'{forms["bold"]}-{forms["limpa"]}' * 50)
         sleep(4)
 
@@ -80,8 +80,8 @@ while True:
                 break
 
             elif Esc == 4:
-                print(f'{forms["bold"]}... A Chapecoense está na posição .')
-                print(f'... {Times}')
+                print(f'{forms["bold"]}... O Palmeiras está na posição {Times.index("Palmeiras")}.')
+
                 print(f'{forms["bold"]}-{forms["limpa"]}' * 50)
                 sleep(4)
                 break
