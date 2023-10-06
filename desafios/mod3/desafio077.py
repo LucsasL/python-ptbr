@@ -1,21 +1,34 @@
 palavras = ('APRENDER', 'PROGRAMAR', 'LINGUAGEM', 'PYTHON', 'CURSO', 'GRATIS', 'ESTUDAR', 'PRATICAR', 'TRABALHAR', 'MERCADO', 'PROGRAMADOR', 'FUTURO')
 
-vogais = ('a', 'e', 'i', 'o', 'u')
+vogais = ('A', 'E', 'I', 'O', 'U')
 
 for cont in range(0, 11):
 
-    for cont in range(0, 5):
-        
+    contA = palavras[cont].count('A')
 
-    palavras[cont].count('a')
+    contE = palavras[cont].count('E')
 
-    palavras[cont].count('e')
+    contI = palavras[cont].count('I')
 
-    palavras[cont].count('i')
+    contO = palavras[cont].count('O')
 
-    palavras[cont].count('o')
+    contU = palavras[cont].count('U')
 
-    palavras[cont].count('u')
+    print(f'\n... Na palavra {palavras[cont]} temos as vogais:', end=' ')
 
-    print(f'Na palavra {palavras[cont]} temos as vogais: {vogais}')
+    if contA >= 1:
+        print(f'{vogais[0]}', end=' ')
+
+    if contE >= 1:
+        print(f'{vogais[1]}', end=' ')
+
+    if contI >= 1:
+        print(f'{vogais[2]}', end=' ')
+
+    if contO >= 1:
+        print(f'{vogais[3]}', end=' ')
+
+    if contU >= 1:
+        print(f'{vogais[4]}', end=' ')
+
     cont += 1
