@@ -10,7 +10,7 @@ forms = {
     'azul': '\033[34m'
 }
 
-Times = ('Botafogo', 'Bragantino', 'Grêmio', 'Palmeiras', 'Flamengo', 'Fluminense', 'Atlético-MG', 'Athletico-PR', 'Fortaleza', 'São Paulo', 'Cuiabá', 'Coritiba')
+Times = ('Botafogo', 'Bragantino', 'Grêmio', 'Palmeiras', 'Flamengo', 'Fluminense', 'Atlético-MG', 'Athletico-PR', 'Fortaleza', 'São Paulo', 'Cuiabá',  'Cruzeiro', 'Corinthians', 'Internacional', 'Santos', 'Goiás', 'Vasco da Gama', 'Bahia', 'América-MG', 'Coritiba')
 
 print('{}={}'.format(forms['roxo'], forms['limpa']) * 160)
 print(f'{forms["bold"]}{"Campeonato Brasileiro de Futebol":^160}{forms["limpa"]}')
