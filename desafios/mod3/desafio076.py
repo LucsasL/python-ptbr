@@ -1,0 +1,12 @@
+produtos = ('Lápis', 1.75, 'Borracha', 2.00, 'Caderno', 15.90, 'Estojo', 25.00, 'Transferidor', 4.20, 'Compasso', 9.99, 'Mochila', 120.32, 'Canetas', 22.30, 'Livro', 34.90)
+
+print('-' * 55)
+print(f'{"LISTAGEM DE PREÇO":^55}')
+print('-' * 55)
+print(f'{produtos[0]:<45} R$ {produtos[1]:>5}')
+print(f'{produtos[2]:<45} R$ {produtos[3]:>5}')
+print(f'{produtos[4]:<45} R$ {produtos[5]:>5}')
+print(f'{produtos[6]:<45} R$ {produtos[7]:>5}')
+print(f'{produtos[8]:<45} R$ {produtos[9]:>5}')
+print(f'{produtos[10]:<45} R$ {produtos[11]:>5}')
+print('-' * 55)
