@@ -1,12 +1,19 @@
-produtos = ('Lápis', 1.75, 'Borracha', 2.00, 'Caderno', 15.90, 'Estojo', 25.00, 'Transferidor', 4.20, 'Compasso', 9.99, 'Mochila', 120.32, 'Canetas', 22.30, 'Livro', 34.90)
+produtos = ('Lápis', 1.75,
+            'Borracha', 2,
+            'Caderno', 15.9,
+            'Estojo', 25,
+            'Transferidor', 4.2,
+            'Compasso', 9.99,
+            'Mochila', 120.32,
+            'Canetas', 22.3,
+            'Livro', 34.9)
 
 print('-' * 55)
-print(f'{"LISTAGEM DE PREÇO":^55}')
+print('LISTAGEM DE PREÇO'.center(55))
 print('-' * 55)
-print(f'{produtos[0]:<45} R$ {produtos[1]:>5}')
-print(f'{produtos[2]:<45} R$ {produtos[3]:>5}')
-print(f'{produtos[4]:<45} R$ {produtos[5]:>5}')
-print(f'{produtos[6]:<45} R$ {produtos[7]:>5}')
-print(f'{produtos[8]:<45} R$ {produtos[9]:>5}')
-print(f'{produtos[10]:<45} R$ {produtos[11]:>5}')
+for n in range(0, len(produtos)):
+    if n % 2 == 0:
+        print(f'{produtos[n]:.<45}', end='')
+    else:
+        print(f' R$ {produtos[n]:>5.2f}')
 print('-' * 55)
