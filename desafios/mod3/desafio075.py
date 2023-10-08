@@ -15,6 +15,6 @@ print(f'... Você digitou os valores: {valores}')
 
 print(f'... O número 9 apareceu {nove} vezes.')
 
-print(f'... O primeiro 3 foi digitado na posição {valores.find(3)}.')
+print(f'... O primeiro 3 foi digitado na posição {valores.index("3")}.')
 
 print(f'... Os números pares digitados foram: {par}')
