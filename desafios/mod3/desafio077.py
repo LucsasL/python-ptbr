@@ -2,7 +2,7 @@ palavras = ('APRENDER', 'PROGRAMAR', 'LINGUAGEM', 'PYTHON', 'CURSO', 'GRATIS', '
 
 vogais = ('A', 'E', 'I', 'O', 'U')
 
-for cont in range(0, 11):
+for cont in palavras:
 
     contA = palavras[cont].count('A')
 
