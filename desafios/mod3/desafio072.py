@@ -10,8 +10,13 @@ while resp != 'N':
 
         resp = str(input('>>> Quer digitar mais um número [S / N]: ')).strip().upper()[0]
 
-        if resp == 'N':
-            break
+        if resp != 'S' or 'N':
+            while True:
+                resp = str(input('>>> Opção inválida! Digite novamente [S / N]: ')).strip().upper()[0]
+                
+                if resp == 'N' or 'S':
+                    break
+                    
     else:
         while True:
             dig = int(input('>>> Número inválido! Digite um número entre 0 e 20: '))
@@ -21,10 +26,12 @@ while resp != 'N':
 
                 resp = str(input('>>> Quer digitar mais um número [S / N]: ')).strip().upper()[0]
 
-                if resp == 'N':
-                    break
-                else:
-                    break
+                if resp != 'S' or 'N':
+                    while True:
+                        resp = str(input('>>> Opção inválida! Digite novamente [S / N]: ')).strip().upper()[0]
+                        
+                        if resp == 'N' or 'S':
+                            break
 
-        if resp == 'N':
-            break
+                elif resp == 'N':
+                    break
