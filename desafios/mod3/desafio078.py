@@ -1,19 +1,25 @@
 números = list()
 
+posmai = posmen = 0
+
 for cont in range(0,5):
-    números.append(int(input('>>> Digite um número: ')))
+    números.append(int(input(f'>>> Digite o valor da posição {cont}: ')))
 
     if cont == 0:
-        maior = menor = números
+        maior = menor = números[cont]
 
-    if números > maior:
-        maior = números
+    if números[cont] > maior:
+        maior = números[cont]
+        posmai = cont
     
-    if números < menor:
-        menor = números
+    if números[cont] < menor:
+        menor = números[cont]
+        posmen = cont
 
-print(números)
+print('-' * 50)
 
-print(f'... O maior número foi o {maior}')
+print(f'Você digitou os valores {números}')
 
-print(f'... O menor número foi o {menor}')
+print(f'... O maior número foi o {maior} na posição {posmai}')
+
+print(f'... O menor número foi o {menor} na posição {posmen}')
