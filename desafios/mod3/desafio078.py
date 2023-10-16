@@ -1,6 +1,4 @@
-números = list()
-
-posmai = posmen = 0
+posmai = posmen = números = list()
 
 for cont in range(0,5):
     números.append(int(input(f'>>> Digite o valor da posição {cont}: ')))
@@ -20,6 +18,6 @@ print('-' * 50)
 
 print(f'Você digitou os valores {números}')
 
-print(f'... O maior número foi o {maior} na posição {posmai}')
+print(f'... O maior número foi o {maior} na posição {posmai[0]}... {posmai[1]}')
 
-print(f'... O menor número foi o {menor} na posição {posmen}')
+print(f'... O menor número foi o {menor} na posição {posmen[0]}... {posmen[1]}')
