@@ -1,6 +1,7 @@
 forms = {
     'limpa': '\033[m',
     'bold': '\033[1m',
+    'roxo': '\033[1;35m',
 }
 
 numeros = list()
@@ -12,6 +13,7 @@ print(f'{forms["bold"]}DESAFIO CONTADOR DE LISTA{forms["limpa"]}'.center(55))
 print(f'{forms["roxo"]}-{forms["limpa"]}' * 50)
 
 while True:
+    n = int(input(f'>>> Digite o {c + 1}° número: '))
     numeros.append(n)
 
     if c > 0 and n in numeros[:c]:
@@ -21,6 +23,7 @@ while True:
 
     else:
         resp = str(input('>>> Adicionar mais um número? [S / N]:')).strip().upper()[0]
+        c += 1
 
     if resp != 'S' and resp != 'N':
         while True:
