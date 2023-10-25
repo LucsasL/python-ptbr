@@ -1,7 +1,5 @@
 números = []
 
-posmai = posmen = 0
-
 for cont in range(0,5):
     números.append(int(input(f'>>> Digite o valor da posição {cont}: ')))
 
@@ -11,11 +9,9 @@ for cont in range(0,5):
     else:
         if números[cont] > maior:
             maior = números[cont]
-            posmai += 1
         
         if números[cont] < menor:
             menor = números[cont]
-            posmen += 1
 
 print('-' * 50)
 
