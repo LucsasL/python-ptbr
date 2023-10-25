@@ -14,14 +14,14 @@ print(f'{forms["roxo"]}-{forms["limpa"]}' * 50)
 
 while True:
     n = int(input(f'>>> Digite o {c + 1}° número: '))
-    numeros.append(n)
 
     if c > 0 and n in numeros[:c]:
         print(f'... Número repetido! Não vou adicionar...')
-        numeros.pop()
         resp = str(input('>>> Adicionar mais um número? [S / N]:')).strip().upper()
 
     else:
+        numeros.append(n)
+        print(f'Número adicionado com sucesso...')
         resp = str(input('>>> Adicionar mais um número? [S / N]:')).strip().upper()[0]
         c += 1
 
