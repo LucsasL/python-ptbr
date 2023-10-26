@@ -4,8 +4,20 @@ forms = {
     'roxo': '\033[1;35m',
 }
 
+numeros = []
+
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 print('Desafio 80'.center(60))
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 
-# Estrutura básica
+for c in range(0, 5):
+    num = float(input(f'>>> Digite o {c + 1}° número número: '))
+
+    if numeros[c] < numeros[c - 1]:
+        numeros.insert[0]
+    
+    if numeros[c] > numeros[c - 1]:
+        numeros.insert[4]
+
+
+print(numeros)
