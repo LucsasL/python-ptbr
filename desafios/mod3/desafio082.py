@@ -41,11 +41,11 @@ while True:
     elif resp == 'N':
         break
 
-print('\n... Você digitou os valores: ', end='')
+print('\n... Você digitou os valores: [ ', end='')
 
-for item in numeros:
-    print(f'{forms["azul"] if item % 2 == 0 else forms["amarelo"]}{numeros[item]}{forms["limpa"]}', end='' if item == numeros[-1] else '] \n')
+for item in range(len(numeros)):
+    print(f'{forms["azul"] if item % 2 == 0 else forms["amarelo"]}{numeros[item]}{forms["limpa"]}', end=', ' if item < len(numeros) - 1 else ' ] \n')
 
-print('-=-' * 40)
+print('-=-' * 20)
 print(f'... Os valores ímpares foram: {forms["amarelo"]}{impar}{forms["limpa"]}')
 print(f'... Os valores pares foram: {forms["azul"]}{par}{forms["limpa"]}')
