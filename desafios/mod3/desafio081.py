@@ -1,3 +1,16 @@
+forms = {
+    'limpa': '\033[m',
+    'bold': '\033[1n',
+    'roxo': '\033[1;35m',
+    'azul': '\033[1;34m',
+    'verde': '\033[32m',
+    'vermelho': '\033[31m'
+}
+
+print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
+print('ANALISADOR DE ARRAYS'.center(60))
+print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
+
 numeros = []
 
 while True:
@@ -20,10 +33,10 @@ while True:
         break
 
 print(f'... No total, foram digitados {len(numeros)} números.')
-print(f'... A lista de números ordenadas é: {numeros.sort(reverse=True)}') # A propriedaded reverse não funcionou ainda
+print(f'... A lista de números ordenadas é: {forms["azul"]}{numeros.sort(reverse=True)}{forms["limpa"]}') # A propriedaded reverse não funcionou ainda
 
 if 5 in numeros:
-    print(f'... o valor 5 está na lista.')
+    print(f'... o valor 5 {forms["verde"]}ESTÁ{forms["limpa"]} na lista.')
 
 else:
-    print('... O número 5 não está na lista.')
+    print(f'... O número 5 {forms["vermelho"]}NÃO ESTÁ{forms["limpa"]} na lista.')

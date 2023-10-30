@@ -1,3 +1,15 @@
+forms = {
+    'limpa': '\033[m',
+    'bold': '\033[1n',
+    'roxo': '\033[1;35m',
+    'azul': '\033[34m',
+    'amarelo': '\033[33m'
+}
+
+print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
+print('PAR OU ÍMPAR'.center(60))
+print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
+
 numeros = []
 
 par = []
@@ -29,7 +41,11 @@ while True:
     elif resp == 'N':
         break
 
-print(f'\n... Você digitou os valores: {numeros}')
+print('\n... Você digitou os valores: ', end='')
+
+for item in numeros:
+    print(f'{forms["azul"] if item % 2 == 0 else forms["amarelo"]}{numeros[item]}{forms["limpa"]}', end='' if item == numeros[-1] else '] \n')
+
 print('-=-' * 40)
-print(f'... Os valores ímpares foram: {impar}')
-print(f'... Os valores pares foram: {par}')
+print(f'... Os valores ímpares foram: {forms["amarelo"]}{impar}{forms["limpa"]}')
+print(f'... Os valores pares foram: {forms["azul"]}{par}{forms["limpa"]}')
