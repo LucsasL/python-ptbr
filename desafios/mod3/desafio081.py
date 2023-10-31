@@ -14,8 +14,7 @@ print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 numeros = []
 
 while True:
-    num = float(input('>>> Digite um número: '))
-    numeros.append(num)
+    numeros.append(int(input('>>> Digite um número: ')))
 
     resp = str(input('>>> Quer adicionar mais números? [S / N]: ')).strip().upper()[0]
 
@@ -32,8 +31,10 @@ while True:
     elif resp == 'N':
         break
 
+numeros.sort(reverse=True)
+print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 print(f'... No total, foram digitados {len(numeros)} números.')
-print(f'... A lista de números ordenadas é: {forms["azul"]}{numeros.sort(reverse=True)}{forms["limpa"]}') # A propriedaded reverse não funcionou ainda
+print(f'... A lista de números ordenadas é: {forms["azul"]}{numeros}{forms["limpa"]}')
 
 if 5 in numeros:
     print(f'... o valor 5 {forms["verde"]}ESTÁ{forms["limpa"]} na lista.')
