@@ -1,4 +1,3 @@
-# Solução sem parênteses
 forms = {
     'limpa': '\033[m',
     'bold': '\033[1m',
