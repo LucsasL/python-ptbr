@@ -3,8 +3,8 @@ dado = list()
 totmai = totmen = 0
 
 for c in range(0, 5):
-    dado.append(str(input('Nome: ')))
-    dado.append(int(input('Idade: ')))
+    dado.append(str(input('>>> Nome: ')))
+    dado.append(int(input('>>> Idade: ')))
 
 print(' Dados de entrada '.center(40, '='))
 for p in range(0, len(dado), 2):
