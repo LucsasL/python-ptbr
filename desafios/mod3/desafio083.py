@@ -1,3 +1,4 @@
+# Solução sem parênteses
 forms = {
     'limpa': '\033[m',
     'bold': '\033[1m',
@@ -12,8 +13,22 @@ print(f'{forms["roxo"]}={forms["limpa"]}' * 70)
 
 expr = str(input('>>> Digite uma expressão numérica: ')).strip()
 
-if expr.count('(') == expr.count(')'):
-    print(f'... Sua expressão é {forms["verde"]}valida.{forms["limpa"]}')
+listaParent = []
+
+for car in expr:
+    if car == '(':
+        listaParent.append('(')
+
+    elif car == ')':
+        if len(listaParent) > 0:
+            listaParent.pop()
+
+        else:
+            listaParent.append(')')
+            break
+
+if len(listaParent) == 0:
+    print(f'Sua expressão {forms["verde"]}ESTÁ VALIDA.{forms["limpa"]}')
 
 else:
-    print(f'... Sua expressão é {forms["vermelho"]}inválida.{forms["limpa"]}')
+    print(f'Sua expressão {forms["vermelho"]}NÃO ESTÁ VALIDA.{forms["limpa"]}')
