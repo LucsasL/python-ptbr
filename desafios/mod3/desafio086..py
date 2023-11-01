@@ -9,15 +9,15 @@ print(f'{forms["bold"]}Matrizes em Python{forms["limpa"]}'.center(60))
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 
 matrix = []
-count = 0
 
-for c in range(0, 3):
+for l in range(0, 3):
     lin = []
 
-    for l in range(0, 3):
-        lin.append(str(input(f'>>> Digite um valora para a posição {count + 1}: ')).strip())
-        count += 1
+    for c in range(0, 3):
+        lin.append(str(input(f'>>> Digite um valora para a posição [{l}, {c}]: ')).strip())
     matrix.append(lin[:])
 
+print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
+
 for c in range(0, 3):
-    print(matrix[c])
+    print(f' {matrix[c]} ')
