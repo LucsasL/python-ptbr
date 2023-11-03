@@ -9,19 +9,27 @@ forms = {
 }
 
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
-print(f'{forms["bold"]}Ajuda na MEGA SENA{forms["limpa"]}'.center(60))
+print(f'{forms["bold"]}JOGAR NA MEGA SENA{forms["limpa"]}'.center(60))
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 
 jogosMegaSena = []
 RandNum = []
+count = 0
 
 jogos = int(input('>>> Quantos jogos serão jogados?: '))
 
 print(f' SORTEANDO {jogos} JOGOS '.center(60, '='))
 
 for j in range(0, jogos):
-    for count in range(0, 6):
-        RandNum.append(randint(1, 60))
+    while count < 6:
+        RandNum.append(randint(0, 60))
+
+        if count > 0 and RandNum[count] == RandNum[count - 1]:
+            RandNum.pop()
+            count -= 1
+        
+        count += 1
+    count = 0
 
     jogosMegaSena.append(RandNum[:])
     RandNum.clear()
