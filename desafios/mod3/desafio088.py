@@ -30,4 +30,4 @@ for j in range(0, jogos):
     print(f'... Jogo {j + 1}: {jogosMegaSena[j]}')
     sleep(1)
 
-print(f'{forms["verde"]}< BOA SORTE! >{forms["limpa"]}'.center(70, '='))
+print(f'{forms["verde"]} < BOA SORTE! > {forms["limpa"]}'.center(70, '='))
