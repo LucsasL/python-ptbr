@@ -20,3 +20,11 @@ E como não podia ser diferente, o Curso que usarei para aprender a parte básic
 ### Mundo 1 terminado - 15 de Setembro de 2023
 
 Terminei o mundo 1 do curso, que se foca em desenvolver a base da linguagem, entrando em tópicos envolvendo sintaxes básicas, operadores aritméticos, ordens de precedência, módulos e um pouco de lógica de programação e raciocínio. Começarei o segundo mundo hoje mesmo.
+
+### Avanço nos mundos do curso + Novas pretenções de aprendizagem - 04 de Novembro de 2023
+
+Muito do que foi observado no curso já foi aprendido por mim no exato momento em que escrevo essa atualização de repositório, envolvendo tuplas, listas, laços de repetição e condicionais de todas as formas. Porém ainda há muito que se ver em Python, como se aprofundar em bibliotecas de **Web Development** como *Django* e *Flask*, bem como outras partes da programação, como manipulação de dados e gerenciamento de informações, onde usa-se *Pandas* e afins, e até criação de Inteligências artificiais, que também pretendo estudar em um futuro breve.
+
+Muito do que ainda pretendo estudar não será abordado nesse curso, já que os cursos do Curso em Vídeo tem como objetivo convidar novas pessoas a começar os estudos na programação, e não apresentar tudo sobre o universo da tecnologia.
+
+Contudo, muito brevemente acabarei o curso, e um tempo depois passarei a me aprofundar em libs de Python pra me profissionalizar e poder contribuir em projetos aqui no GitHub, no momento, focarei mais em JavaScript, que é mais essencial para o desenvolvimento Web e a área que viso me desenvolver. De aqui em diante, é bem possível que eu passe a atualizar o [Repositório de JavaScript](https://github.com/LucsasL/JavaScript-PTBR) que será onde documentarei meus estudos.
