@@ -8,28 +8,28 @@ print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 print(f'{forms["bold"]}Matrizes em Python{forms["limpa"]}'.center(60))
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 
-matrix = []
-soma = somaTer = maiorSeg = 0
+matriz = [[], [], []]
+somaPar = somaTer = maiorSeg = 0
 
 for l in range(0, 3):
-    lin = []
-
     for c in range(0, 3):
-        lin.append(str(input(f'>>> Digite um valora para a posição [{l}, {c}]: ')).strip())
-    matrix.append(lin[:])
+        matriz[l].append(int(input(f'>>> Digite um valora para a posição [{l}, {c}]: ')))
 
 print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
 
-for c in range(0, 3):
-    print(f' {matrix[c]} ')
+for l in range(0, 3):
+    for c in range(0, 3):
+        print(f'[ {matriz[l][c]:^5} ]', end='' if c < 2 else '\n')
 
-for l in matrix:
-    soma += matrix[l]
+        if matriz[l][c] % 2 == 0:
+            somaPar += matriz[l][c]
+    somaTer += matriz[l][2]
 
-for c in matrix:
-    # Em desenvolvimento
-    print('')
+for c in range(3):
+    if matriz[1][c] > maiorSeg:
+        maiorSeg = matriz[1][c]
 
-print(f'... A soma de todos os valores foi igual a {soma}.')
+print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
+print(f'... A soma de todos os valores pares foi igual a {somaPar}.')
 print(f'... A soma dos valores da terceira coluna é igual a {somaTer}.')
 print(f'... O maior número da segunda linha {maiorSeg}.')

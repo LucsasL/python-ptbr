@@ -24,13 +24,14 @@ for j in range(0, jogos):
     while count < 6:
         RandNum.append(randint(0, 60))
 
-        if count > 0 and RandNum[count] == RandNum[count - 1]:
+        if count > 0 and RandNum[count] in RandNum[:count]:
             RandNum.pop()
             count -= 1
         
         count += 1
     count = 0
 
+    RandNum.sort()
     jogosMegaSena.append(RandNum[:])
     RandNum.clear()
 
