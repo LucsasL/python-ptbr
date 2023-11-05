@@ -49,10 +49,10 @@ print(f'... O maior peso foi {maisPes:.2f}Kg e eram de: ', end='')
 
 for p in cadastro:
     if p[1] == maisPes:
-        print(f' [{p[0]}] ', end='')
+        print(f'[{p[0]}] ', end='')
     
 print(f'\n... O menor peso foi {menPes:.2f}Kg e eram de: ', end='')
 
 for p in cadastro:
     if p[1] == menPes:
-        print(f' [{p[0]}] ', end='' if p[1] == menPes else '\n')
+        print(f'[{p[0]}] ', end='' if p[1] == menPes else '\n')
