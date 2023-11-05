@@ -13,7 +13,7 @@ alunos = []
 alunoNotas = []
 media = []
 resp = ''
-calcMedia = 0
+calcMedia = c = 0
 
 while resp != 'N':
     alunoNotas.append(str(input('>>> Digite o nome: ')).strip().capitalize())
@@ -34,11 +34,13 @@ while resp != 'N':
         if resp == 'N':
             break
 
-for n, i in alunos: # Erro ao tentar captar valor em uma sub-lista dentro de outra
-    calcMedia += alunos[i] + alunos[i]
-    media.append(calcMedia)
+for i in alunos: # Erro ao tentar captar valor em uma sub-lista dentro de outra
+    calcMedia += i[1] + i[2]
+    media.append(calcMedia / 2)
     calcMedia = 0
 
 print(f' BOLETIM '.center(60, '='))
-for a, i in alunos:
-    print(f'{alunos[i]:10}{media[i]}')
+
+for m in media:
+    print(f'{alunos[c][0]:50}{media[c]}')
+    c += 1
