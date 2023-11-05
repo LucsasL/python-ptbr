@@ -20,4 +20,5 @@ for l in range(0, 3):
 print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
 
 for c in range(0, 3):
-    print(f' {matrix[c]} ')
+    for i in range(0, 3):
+        print(f'[ {matrix[c][i]} ]', end='' if i < 2 else '\n')
