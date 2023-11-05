@@ -8,23 +8,21 @@ print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 print(f'{forms["bold"]}Lista pares e ímpares{forms["limpa"]}'.center(60))
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 
-lista = []
-pares = []
-impares = []
+lista = [[], []]
+valor = 0
 
 for c in range(0, 7):
-    num = int(input(f'>>> Digite o {c + 1}° número: '))
+    valor = int(input(f'>>> Digite o {c + 1}° número: '))
 
-    if num % 2 == 0:
-        pares.append(num)
+    if valor % 2 == 0:
+        lista[0].append(valor)
+
     else:
-        impares.append(num)
+        lista[1].append(valor)
 
-lista.append(pares)
-lista.append(impares)
-pares.sort()
-impares.sort()
+lista[0].sort()
+lista[1].sort()
 
 print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
-print(f'... Os números pares digitados foram: {pares}')
-print(f'... OS números ímpares digitados foram: {impares}')
+print(f'... Os números pares digitados foram: {lista[0]}')
+print(f'... OS números ímpares digitados foram: {lista[1]}')
