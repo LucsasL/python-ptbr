@@ -11,8 +11,9 @@ print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 pessoas = []
 cadastro = []
 c = 0
+resp = ''
 
-while True:
+while resp != 'N':
     pessoas.append(str(input('>>> Digite o primeiro nome: ')))
     pessoas.append(float(input('>>> Digite a peso [Kg]: ')))
     cadastro.append(pessoas[:])
@@ -30,9 +31,6 @@ while True:
         if resp == 'N':
             break
 
-    elif resp == 'N':
-        break
-
 for p in cadastro:
     if c == 0:
         maisPes = menPes = p[1]
@@ -44,7 +42,8 @@ for p in cadastro:
         menPes = p[1]
     c += 1
 
-print(f'\n... Foram cadastradas {len(cadastro)} pessoas.')
+print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
+print(f'... Foram cadastradas {len(cadastro)} pessoas.')
 print(f'... O maior peso foi {maisPes:.2f}Kg e eram de: ', end='')
 
 for p in cadastro:
