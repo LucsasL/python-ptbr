@@ -46,7 +46,7 @@ print(f'{"N.":3}{"NOME":50}{"MÉDIA"}')
 print('-' * 60)
 
 for i, m in enumerate(media):
-    print(f'{i:<3}{alunos[c][0]:50}{media[c]}')
+    print(f'{i:<3}{alunos[c][0]:50}{media[c]:.1f}')
     c += 1
 
 print('-' * 60)
@@ -64,7 +64,11 @@ while True:
                 if mostra == 'S' or mostra == 'N':
                     break
         
-            if mostra == 'N':
+            if mostra == 'S':
+                print(f'... Notas de {alunos[0][0]} são [{alunos[0][1]} {alunos[0][2]}]\n')
+                break
+
+            elif mostra == 'N':
                 print('... FINALIZANDO...')
                 break
 
@@ -83,21 +87,19 @@ while True:
             print('... FINALIZANDO...')
             break
 
-        elif 0 <= mostra <= len(alunos):
+        elif 0 <= mostra < len(alunos):
             print(f'... Notas de {alunos[mostra][0]} são [{alunos[mostra][1]} {alunos[mostra][2]}]\n')
 
         else:
             while True:
-                print('>>> (999 para interromper) <<<')
                 mostra = int(input(f'>>> Índice inválido! Digite novamente [0 a {len(alunos) - 1}]: '))
 
-                if 0 <= mostra <= len(alunos):
+                if 0 <= mostra < len(alunos):
                     print(f'... Notas de {alunos[mostra][0]} são [{alunos[mostra][1]} {alunos[mostra][2]}]\n')
-                    break
 
-                elif mostra == '999':
+                elif mostra == 999:
                     print('... FINALIZANDO...')
                     break
 
-            if mostra == 'N':
+            if mostra == 999:
                 break
