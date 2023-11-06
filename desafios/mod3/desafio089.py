@@ -41,12 +41,12 @@ for i in alunos:
 
 print()
 print(f' BOLETIM '.center(60, '='))
-print(f'{"N.":3}{"NOME":50}{"MÉDIA"}')
+print(f'{"N.":4}{"NOME":50}{"MÉDIA"}')
 
 print('-' * 60)
 
 for i, m in enumerate(media):
-    print(f'{i:<3}{alunos[c][0]:50}{media[c]:.1f}')
+    print(f'{i:<4}{alunos[c][0]:50}{media[c]:.1f}')
     c += 1
 
 print('-' * 60)
