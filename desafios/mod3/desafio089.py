@@ -34,7 +34,7 @@ while resp != 'N':
         if resp == 'N':
             break
 
-for i in alunos: # Erro ao tentar captar valor em uma sub-lista dentro de outra
+for i in alunos:
     calcMedia += i[1] + i[2]
     media.append(calcMedia / 2)
     calcMedia = 0
