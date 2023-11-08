@@ -7,7 +7,7 @@ forms = {
 }
 
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
-print(f'{forms["bold"]}CONDIÇÃO ALUNO{forms["limpa"]}'.center(60))
+print(f'{forms["bold"]}JOGAR DADOS{forms["limpa"]}'.center(60))
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 
 jogadas = {
