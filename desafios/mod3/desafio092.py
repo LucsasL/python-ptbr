@@ -7,7 +7,7 @@ forms = {
 }
 
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
-print(f'{forms["bold"]}CONDIÇÃO ALUNO{forms["limpa"]}'.center(60))
+print(f'{forms["bold"]}ANALISE APOSENTADORIA{forms["limpa"]}'.center(60))
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 
 dicio = []
@@ -17,6 +17,8 @@ dicio['Nome'] = str(input('>>> Digite o nome: ')).strip().title()
 dicio['AnoNasc'] = int(input(f'>>> Digite o ano de nascimento de {dicio["Nome"]}: '))
 
 idade =  anoAtual - dicio['AnoNasc']
-dicio['CarteiraTrab'] = idade
+dicio['CarteiraTrab'] = int(input('>>> Número da carteira de trabalho (0 pra quem não tem: )'))
 
 print(dicio['CarteiraTrab'])
+
+print('-=' * 30)
