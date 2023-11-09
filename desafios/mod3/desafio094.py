@@ -102,4 +102,4 @@ elif len(cadastros) > 1:
                 print(f'{p["Nome"]}, ' if i < len(cadastros) - 2 else f'{p["Nome"]}.', end='' if i < len(cadastros) - 2 else '\n')
     
     else:
-        print(f'... Não pessoas com idade acima da média.')
+        print(f'... Não há pessoas com idade acima da média.')
