@@ -47,11 +47,26 @@ for i, v in enumerate(jogadores):
     
 print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
 
-while Escolha != 999 or Escolha != 'N':
+while Escolha != 999:
+    # Índice de apenas 1 jogador
     if len(jogadores) == 1:
         Escolha = str(input('>>> Mostrar dados do jogador? [S / N]: ')).strip().upper()[0]
 
-        if Escolha != 'S' and Escolha != 'N':
+        if Escolha == 'S':
+            print(f'- LEVANTAMENTOS DO JOGADOR {jogadores[0]["Nome"]}:')
+            print(f'... O jogador {jogadores[0]["Nome"]} jogou {jogadores[0]["Partidas"]} partidas.')
+
+            for i, v in enumerate(jogadores[0]["Gols"]):
+                print(f'...    => Na partida {forms["azul"]}{i + 1},{forms["limpa"]} fez {forms["azul"]}{v} gols.{forms["limpa"]}')
+
+            print(f'... Foi um total de {forms["azul"]}{jogadores[0]["Total"]} gols.{forms["limpa"]}')
+            print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
+            break
+            
+        elif Escolha == 'N':
+            break
+    
+        else:
             while True:
                 Escolha = str(input('>>> Opção inválida! Digite novamente [S / N]: ')).strip().upper()[0]
 
@@ -68,18 +83,11 @@ while Escolha != 999 or Escolha != 'N':
                     print(f'... Foi um total de {forms["azul"]}{jogadores[0]["Total"]} gols.{forms["limpa"]}')
                     print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
                     break
-        
-        elif Escolha == 'S':
-            print(f'- LEVANTAMENTOS DO JOGADOR {jogadores[0]["Nome"]}:')
-            print(f'... O jogador {jogadores[0]["Nome"]} jogou {jogadores[0]["Partidas"]} partidas.')
+            
+            if Escolha == 'N':
+                break
 
-            for i, v in enumerate(jogadores[0]["Gols"]):
-                print(f'...    => Na partida {forms["azul"]}{i + 1},{forms["limpa"]} fez {forms["azul"]}{v} gols.{forms["limpa"]}')
-
-            print(f'... Foi um total de {forms["azul"]}{jogadores[0]["Total"]} gols.{forms["limpa"]}')
-            print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
-            break
-
+    # Multiplos índices
     else:
         Escolha = int(input(f'>>> Mostrar dados de qual jogador? [0 a {len(jogadores) - 1}]: '))
 
@@ -92,6 +100,9 @@ while Escolha != 999 or Escolha != 'N':
 
             print(f'... Foi um total de {forms["azul"]}{jogadores[Escolha]["Total"]} gols.{forms["limpa"]}')
             print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
+        
+        elif Escolha == 999:
+            break
 
         else:
             while True:
