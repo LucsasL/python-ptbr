@@ -8,7 +8,7 @@ forms = {
 jogos = {}
 jogadores = []
 count = 0
-resp = ''
+resp = Escolha = ''
 
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 print(f'{forms["bold"]}CONDIÇÃO ALUNO{forms["limpa"]}'.center(60))
@@ -16,7 +16,7 @@ print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 
 while resp != 'N':
     if count > 0:
-        print(f'{forms["roxo"]}-{forms["limpa"]}' * 60)
+        print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
     jogos['Nome'] = str(input('>>> Digite o nome do jogador: ')).strip().capitalize()
     jogos['Partidas'] = int(input(f'>>> Quantas partidas {jogos["Nome"]} jogou: '))
     jogos['Gols'] = []
@@ -44,21 +44,44 @@ print(f'{forms["roxo"]}-{forms["limpa"]}' * 60)
 
 for i, v in enumerate(jogadores):
     print(f'{i:<5}{v["Nome"]:<30}{v["Gols"]}{v["Total"]:>5}')
-
-Escolha = int(input(f'>>> Mostrar dados de qual jogador? [0 a {len(jogadores) - 1}]: '))
-
-'''print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
-print(f'{jogos}')
+    
 print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
 
-for i, v in jogos.items():
-    print(f'... O campo {forms["azul"]}{i}{forms["limpa"]} tem o valor {forms["azul"]}{v}.{forms["limpa"]}')
+while Escolha != 999:
+    if len(jogadores):
+        Escolha = int(input('>>> Mostrar dados de qual jogador? [0]: '))
 
-print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
+    else:
+        Escolha = int(input(f'>>> Mostrar dados de qual jogador? [0 a {len(jogadores) - 1}]: '))
 
-print(f'... O jogador {jogos["Nome"]} jogou {jogos["Partidas"]} partidas.')
+    if 0 <= Escolha < len(jogadores):
+        print(f'- LEVANTAMENTOS DO JOGADOR {jogadores[Escolha]["Nome"]}:')
+        print(f'... O jogador {jogadores[Escolha]["Nome"]} jogou {jogadores[Escolha]["Partidas"]} partidas.')
 
-for i, v in enumerate(jogos["Gols"]):
-    print(f'    => Na partida {forms["azul"]}{i + 1},{forms["limpa"]} fez {forms["azul"]}{v} gols.{forms["limpa"]}')
+        for i, v in enumerate(jogadores[Escolha]["Gols"]):
+            print(f'    => Na partida {forms["azul"]}{i + 1},{forms["limpa"]} fez {forms["azul"]}{v} gols.{forms["limpa"]}')
 
-print(f'... Foi um total de {forms["azul"]}{jogos["Total"]} gols.{forms["limpa"]}')'''
+        print(f'... Foi um total de {forms["azul"]}{jogadores[Escolha]["Total"]} gols.{forms["limpa"]}')
+        print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
+
+    else:
+        while True:
+            if len(jogadores) == 1:
+                Escolha = int(input('>>> Índice inválido! Digite novamente [0]: '))
+
+            else:
+                Escolha = int(input(f'>>> Índice inválido! Digite novamente [0 e {len(jogadores) - 1}]: '))
+
+            if 0 <= Escolha < len(jogadores):
+                print(f'- LEVANTAMENTOS DO JOGADOR {jogadores[Escolha]["Nome"]}:')
+                print(f'... O jogador {jogadores[Escolha]["Nome"]} jogou {jogadores[Escolha]["Partidas"]} partidas.')
+
+                for i, v in enumerate(jogadores[Escolha]["Gols"]):
+                    print(f'    => Na partida {forms["azul"]}{i + 1},{forms["limpa"]} fez {forms["azul"]}{v} gols.{forms["limpa"]}')
+
+                print(f'... Foi um total de {forms["azul"]}{jogadores[Escolha]["Total"]} gols.{forms["limpa"]}')
+                print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
+                break
+
+            elif Escolha == 999:
+                break
