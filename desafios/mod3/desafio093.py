@@ -8,7 +8,7 @@ forms = {
 jogos = {}
 
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
-print(f'{forms["bold"]}CONDIÇÃO ALUNO{forms["limpa"]}'.center(60))
+print(f'{forms["bold"]}AVALIAÇÃO DE JOGADOR{forms["limpa"]}'.center(60))
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 
 jogos['Nome'] = str(input('>>> Digite o nome do jogador: ')).strip().capitalize()
