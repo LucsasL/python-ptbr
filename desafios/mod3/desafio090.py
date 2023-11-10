@@ -13,8 +13,12 @@ cond = {}
 cond['nome'] = str(input('>>> Digite o nome do aluno: ')).strip()
 cond['media'] = float(input(f'>>> Média de {cond["nome"]}: '))
 
-if cond['media'] <= 5:
+if cond['media'] < 5:
     cond['situação'] = '\033[31mReprovado\033[m'
+
+elif cond['media'] < 7:
+    cond['situação'] = '\033[33mRecuperação\033[m'
+
 else:
     cond['situação'] = '\033[32mAprovado\033[m'
     
