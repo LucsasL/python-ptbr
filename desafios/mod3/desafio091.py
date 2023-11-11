@@ -24,7 +24,7 @@ for c in range(4):
 print(jogadas)
 
 print('-=' * 30)
-print('Ranking dos jogadores:')
+print(' Ranking dos jogadores '.center(60, '='))
 
 for k, j in jogadas.items():
     print(f'{pos}° lugar: {k} com {j}.')
