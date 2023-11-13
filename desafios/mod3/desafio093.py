@@ -14,11 +14,11 @@ print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 jogos['Nome'] = str(input('>>> Digite o nome do jogador: ')).strip().capitalize()
 jogos['Partidas'] = int(input(f'>>> Quantas partidas {jogos["Nome"]} jogou: '))
 jogos['Gols'] = []
-jogos['Total'] = 0
 
 for c in range(jogos['Partidas']):
     jogos['Gols'].append(int(input(f'>>> Quantos gols na partida {c + 1}?: ')))
-    jogos['Total'] += jogos['Gols'][c]
+
+jogos['Total'] = sum(jogos['Gols'])
 
 print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
 print(f'{jogos}')
