@@ -11,18 +11,19 @@ print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 print(f'{forms["bold"]}ANALISE APOSENTADORIA{forms["limpa"]}'.center(60))
 print(f'{forms["roxo"]}-=-{forms["limpa"]}' * 20)
 
-dicio = {}
+dados = dict()
 anoAtual = date.today().year
 
-dicio['Nome'] = str(input('>>> Digite o nome: ')).strip().title()
-dicio['AnoNasc'] = int(input(f'>>> Digite o ano de nascimento de {dicio["Nome"]}: '))
+dados['Nome'] = str(input('>>> Digite o nome: ')).strip().title()
+AnoNasc = int(input(f'>>> Digite o ano de nascimento de {dados["Nome"]}: '))
+dados['Idade'] = anoAtual - AnoNasc
+dados['CTPS'] = int(input(f'>>> Número da carteira de trabalho {forms["vermelho"]}(0 pra quem não tem: ){forms["limpa"]}: '))
 
-idade = anoAtual - dicio['AnoNasc']
-dicio['CarteiraTrab'] = int(input(f'>>> Número da carteira de trabalho {forms["vermelho"]}(0 pra quem não tem: ){forms["limpa"]}: '))
-
-if dicio['CarteiraTrab'] == 0:
-    SemCarteira = 'Não tem carteira'
-
-print(idade)
+if dados['CTPS'] != 0:
+    dados['Contratação'] = int(input('>>> Ano de contratação: '))
+    dados['Salário'] = float(input('>>> Qual o salário?: R$'))
+    dados['Aposentadoria'] = dados['Idade'] + (dados['Contratação'] + 35 - anoAtual)
 
 print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
+for i, v in dados.items():
+    print(f'    - {i} tem o valor {v}')
