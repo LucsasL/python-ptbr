@@ -80,7 +80,11 @@ if Mulheres == 0:
     print('... Não há mulheres cadastradas.')
 
 elif Mulheres == 1:
-    print(f'... Foi cadastrado apenas {Mulheres} mulher, ', end='')
+    print(f'... Foi cadastrado apenas {Mulheres} mulher, sendo ela ', end='')
+
+    for v in cadastros:
+        if v['Sexo'] == 'F':
+            print(f'{v["Nome"]}.')
 
 else:
     print(f'... Foram cadastradas {Mulheres} mulheres no total, sendo essas: ', end='')
