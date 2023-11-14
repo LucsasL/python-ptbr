@@ -2,14 +2,12 @@ forms = {
     'limpa': '\033[m',
     'bold': '\033[1m',
     'roxo': '\033[1;35m',
-    'azul': '\033[34m'
 }
 
 def Titulo(title):
     print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
     print(f'{forms["bold"]}{title}{forms["limpa"]}'.center(60))
     print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
-    print()
 
 def Escreva(msg):
     msgSize = len(msg) + 6
