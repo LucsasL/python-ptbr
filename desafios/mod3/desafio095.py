@@ -121,3 +121,5 @@ while Escolha != 999:
 
                 elif Escolha == 999:
                     break
+
+print('< VOLTE SEMPRE >'.center(60, '='))
