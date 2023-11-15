@@ -1,3 +1,5 @@
+from time import sleep
+
 forms = {
     'limpa': '\033[m',
     'bold': '\033[1m',
@@ -13,12 +15,16 @@ def Titulo(title):
 
 def Contador(ini, fim, passo):
     if fim > ini:
+        print(f'... Contando de {ini} a {fim} de {passo} em {passo}:')
         for c in range(ini, fim + 1, passo):
             print(f'{c} ', end='')
+            sleep(.5)
     else:
+        print(f'... Contando de {ini} a {fim} de {passo} em {passo}:')
         for c in range(ini, fim, passo):
             print(f'{c} ', end='')
-    print('FIM!')
+            sleep(.5)
+    print('FIM!\n')
 
 # Programa Principal
 Titulo('CONTADOR')
