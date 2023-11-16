@@ -16,20 +16,17 @@ def Fatorial(num, show = False):
     :param show: (opcional) Mostra operação de caculo.
     :return: O valor do fatorial do número "num".
     '''
-    for c in range(num - 1, 1, -1):
+    count = num
+    if show == True:
+        for c in range(num, 0, -1):
+            print(f'{c} x ' if c > 1 else f'{c} = ', end='')
+
+    for c in range(count - 1, 1, -1):
         num *= c
 
-    if show == True:
-        for c in range(5, 0, -1):
-            print(f'{c} x ' if c > 1 else f'{c} = ', end='')
-    
     return num
 
 # Programa Principal7
 Titulo('CALCULANDO FATORIAL ATRAVÉS DE FUNÇÕES')
-
-NumFator = Fatorial(5, True)
-
-print(NumFator)
-
+print(Fatorial(5, True))
 help(Fatorial)
