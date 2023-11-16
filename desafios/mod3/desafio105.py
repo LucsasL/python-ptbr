@@ -1,10 +1,7 @@
 forms = {
     'limpa': '\033[m',
     'bold': '\033[1m',
-    'roxo': '\033[1;35m',
-    'vermelho': '\033[31m',
-    'verde': '\033[32m',
-    'amarelo': '\033[33m'
+    'roxo': '\033[1;35m'
 }
 
 def Titulo(title):
