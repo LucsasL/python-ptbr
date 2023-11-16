@@ -13,7 +13,7 @@ def Titulo(title):
 def Área(compr, larg):
     MQuad = compr * larg
     print(f'\n{forms["limpa"]}... O comprimento é {forms["azul"]}{compr:.2f}m{forms["limpa"]} e a largura é {forms["azul"]}{larg:.2f}m.{forms["limpa"]}')
-    print(f'... Sendo assim, a área do terreno é igual {forms["azul"]}{MQuad:.2f}m².{forms["limpa"]}')
+    print(f'... Sendo assim, a área de um terreno de {compr}x{larg} é igual {forms["azul"]}{MQuad:.2f}m².{forms["limpa"]}')
 
 # Programa principal
 Titulo('ÁREA DO RETÂNGULO')
