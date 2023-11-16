@@ -19,7 +19,7 @@ def Sorteia():
     print(f'... Sorteando 5 valores: ', end='')
     for c in range(5):
         numeros.append(randint(0, 50))
-        print(f'{numeros[c]}, ' if c < 4 else f'{numeros[c]}.', end='' if c < 4 else '\n')
+        print(f'{numeros[c]}, ' if c < 4 else f'{numeros[c]}.', end='' if c < 4 else '\n', flush=True)
         sleep(1)
         
 def SomaPar(num):
