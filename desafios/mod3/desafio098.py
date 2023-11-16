@@ -14,15 +14,21 @@ def Titulo(title):
     print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
 
 def Contador(ini, fim, passo):
+    if passo == 0:
+        passo = 1
+
     if fim > ini:
         print(f'... Contando de {ini} a {fim} de {passo} em {passo}:')
         for c in range(ini, fim + 1, passo):
-            print(f'{c} ', end='')
+            print(f'{c} ', end='', flush=True)
             sleep(.5)
     else:
+        if passo > 0:
+            passo *= -1
+
         print(f'... Contando de {ini} a {fim} de {passo} em {passo}:')
-        for c in range(ini, fim, passo):
-            print(f'{c} ', end='')
+        for c in range(ini, fim - 1, passo):
+            print(f'{c} ', end='', flush=True)
             sleep(.5)
     print('FIM!\n')
 
@@ -35,14 +41,14 @@ while resp != 'N':
     resp = str(input('>>> Criar contagem personzalizada? [S / N]: ')).strip().upper()[0]
 
     if resp == 'S':
-        Contador(int(input('>>> Digite o Inicio: ')), int(input('>>> Digite o fim da contagem: ')), int(input('>>> Digite o passo [+ / -]: ')))
+        Contador(int(input('>>> Digite o Inicio: ')), int(input('>>> Digite o fim da contagem: ')), int(input('>>> Digite o passo: ')))
 
     if resp != 'S' and resp != 'N':
         while True:
             resp = str(input('>>> Opção inválida! Digite novamente [S / N]: ')).strip().upper()[0]
 
             if resp == 'S':
-                Contador(int(input('>>> Digite o Inicio: ')), int(input('>>> Digite o fim da contagem: ')), int(input('>>> Digite o passo [+ / -]: ')))
+                Contador(int(input('>>> Digite o Inicio: ')), int(input('>>> Digite o fim da contagem: ')), int(input('>>> Digite o passo: ')))
                 break
 
             elif resp == 'N':
