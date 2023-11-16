@@ -6,13 +6,13 @@ forms = {
 
 def Titulo(title):
     print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
-    print(f'{forms["bold"]}{title}{forms["limpa"]}'.center(60))
+    print(f'{forms["bold"]}{title}{forms["limpa"]}')
     print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
 
 def Escreva(msg):
-    msgSize = len(msg) + 6
+    msgSize = len(msg) + 4
     print(f'{forms["roxo"]}~{forms["limpa"]}' * msgSize)
-    print(f'{forms["bold"]}{msg}{forms["limpa"]}'.center(msgSize))
+    print(f'  {forms["bold"]}{msg}{forms["limpa"]}'.center(msgSize))
     print(f'{forms["roxo"]}~{forms["limpa"]}' * msgSize)
 
 # Programa Principal
