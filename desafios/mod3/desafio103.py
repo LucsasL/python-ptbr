@@ -13,7 +13,10 @@ def Ficha(nome='', gols=0):
     if nome == '':
         nome = '<desconhecido>'
 
-    if gols == '':
+    if gols.isnumeric():
+        gols = int(gols)
+        
+    else:
         gols = 0
 
     print(f'{forms["roxo"]}-={forms["limpa"]}' * 25)
