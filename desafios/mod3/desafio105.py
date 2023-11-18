@@ -17,30 +17,16 @@ def Notas(* notas, sit = False):
     :return: Dicionário com várias informações sobra a situação da turma
     '''
     alunos = {}
-    mediaTurma = 0
-    for i, n in enumerate(notas):
-        mediaTurma += n
-
-        if i == 0:
-            maior = menor = n
-        
-        if n > maior:
-            maior = n
-
-        if n < menor:
-            menor = n
-
-    mediaTurma /= len(notas)
     alunos['Total de Notas'] = len(notas)
-    alunos['Maior Nota'] = maior
-    alunos['Menor Nota'] = menor
-    alunos['Media da Sala'] = f'{mediaTurma:.2f}'
+    alunos['Maior Nota'] = max(notas)
+    alunos['Menor Nota'] = min(notas)
+    alunos['Media da Sala'] = sum(notas) / len(notas)
 
-    if sit == True:
-        if mediaTurma < 5:
+    if sit:
+        if alunos['Media da Sala'] < 5:
             alunos['sit'] = 'RUIM'
 
-        elif mediaTurma < 7:
+        elif alunos['Media da Sala'] < 7:
             alunos['sit'] = 'RAZOÁVEL'
 
         else:
