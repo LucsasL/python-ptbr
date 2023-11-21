@@ -9,3 +9,6 @@ def Roxo():
 
 def Azul():
     return '\033[34m'
+
+def Vermelho():
+    return '\033[31m'
