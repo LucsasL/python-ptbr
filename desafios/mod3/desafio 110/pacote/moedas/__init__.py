@@ -3,7 +3,7 @@ from pacote import cores
 # Funções externas
 def formMoeda(p, form = True, moeda = 'R$'):
     res = f'{moeda} {p:.2f}'.replace('.', ',')
-    return res if form is True else 'cu'
+    return res if form is True else p
 
 def Resumo(p, aum, dim, form = True):
     print(f'{cores.Roxo()}-={cores.Padrão()}' * 30)
