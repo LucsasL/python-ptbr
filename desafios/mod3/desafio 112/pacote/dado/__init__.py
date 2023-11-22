@@ -5,11 +5,9 @@ def LeiaDinheiro():
 
     if preço.strip() == '':
         print(f'{cores.Vermelho()}[ERRO]: "" é um preço inválido!{cores.Padrão()}')
-    
-    if ',' in preço:
-        float(preço)
-        preço.replace(',', '.')
-    
+
+    if 
+
     float(preço)
 
     return preço
