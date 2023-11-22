@@ -1,14 +1,13 @@
 from pacote import cores
 
 def LeiaDinheiro():
-    preço = str(input(f'>>> Digite o preço: {cores.Azul()}R$'))
+    while True:
+        preço = str(input(f'>>> Digite o preço: {cores.Azul()}R$')).strip().replace(',', '.')
 
-    float(preço[:])
+        if preço.strip() == '' or preço.isalpha():
+            print(f'{cores.Vermelho()}... [ERRO]: "{preço}" é um preço inválido!{cores.Padrão()}')
 
-    if preço.strip() == '' or preço:
-        print(f'{cores.Vermelho()}[ERRO]: "" é um preço inválido!{cores.Padrão()}')
+        else:
+            break
 
-    if preço.find('.') > 0:
-        preço.replace('.', ',')
-
-    return preço
+    return float(preço)
