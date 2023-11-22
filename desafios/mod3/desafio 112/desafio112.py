@@ -9,4 +9,5 @@ string.Titulo('MODULARIZAÇÃO EM PYTHON')
 preço = dado.LeiaDinheiro()
 
 print(preço)
+
 '''moedas.Resumo(preço, 80, 33)'''
