@@ -13,27 +13,50 @@ def Titulo(title):
 def LeiaInt(msg):
     n = msg
     while True:
-        n = str(input(msg))
+        try:
+            n = int(input(msg))
 
-        if n.isnumeric():
-            valor = int(n)
-            break
+        except (ValueError, TypeError):
+            print(f'{forms["vermelho"]}... [ERRO] Por favor, Digite um número inteiro válido.{forms["limpa"]}')
+
+        except KeyboardInterrupt:
+            print(f'{forms["vermelho"]}... O usuário preferiu não digitar o valor.{forms["limpa"]}')
+
+            try:
+                n = 0
+
+            finally:
+                return n
 
         else:
-            try Exception:
-                print(f'{forms["vermelho"]}[ERRO] Digite um número inteiro válido.{forms["limpa"]}')
+            return n
 
-            except ellipsis:
-                print()
+def LeiaFloat(msg):
+    while True:
+        try:
+            n = float(input(msg))
 
-            else:
-                print()
-    
-    return valor
-        
+        except (ValueError, TypeError):
+            print(f'{forms["vermelho"]}... [ERRO] Por favor, digite um valor inteiro válido.{forms["limpa"]}')
+
+        except KeyboardInterrupt:
+            print(f'{forms["vermelho"]}... O usuário preferiu não digitar o valor.{forms["limpa"]}')
+            
+            try:
+                n = 0
+
+            finally:
+                return n
+
+        else:
+            return n
+
+
 # Programa Principal
-Titulo('INPUT EM FUNÇÕES')
+Titulo('TRATAMENTO DE ERROS E EXCEÇÕES')
 
-num = LeiaInt('>>> Digite um números: ')
+numInt = LeiaInt('>>> Digite um números Inteiro: ')
+numFloat = LeiaFloat('>>> Digite um número Real: ')
 
-print(f'>>> Você digitou o número {num}.')
+
+print(f'... O número inteiro digitado foi o {numInt} e o número real foi {numFloat}.')
