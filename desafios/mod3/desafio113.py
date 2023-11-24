@@ -20,7 +20,14 @@ def LeiaInt(msg):
             break
 
         else:
-            print(f'{forms["vermelho"]}[ERRO] Digite um número inteiro válido.{forms["limpa"]}')
+            try Exception:
+                print(f'{forms["vermelho"]}[ERRO] Digite um número inteiro válido.{forms["limpa"]}')
+
+            except ellipsis:
+                print()
+
+            else:
+                print()
     
     return valor
         
