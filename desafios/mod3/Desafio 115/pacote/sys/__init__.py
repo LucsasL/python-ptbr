@@ -21,7 +21,7 @@ def AnaliseEsc():
 
             elif Esc == 2:
                 try:
-                    strings.titulo('CADASTRAR NOVAS PESSOAS', 40)
+                    strings.titulo('CADASTRAR NOVAS PESSOAS')
                     Pessoa['NovPess'] = str(input('>>> Digite o nome: ')).strip().capitalize()
                     Pessoa['Idade'] = int(input(f'>>> Digite a idade de {Pessoa["NovPess"]}: '))
 
@@ -60,6 +60,8 @@ def AnaliseEsc():
 
 
 def Lista():
-    strings.titulo('PESSOAS CADASTRADAS', 40)
-    for p in cadastro:
-        print(f'{p["NovPess"]:30}{p["Idade"]} Anos')
+    strings.titulo('PESSOAS CADASTRADAS')
+    print(f'{"Ind.":5}{"Nome":45}{"Idade":^10}')
+    strings.linha(60, '-')
+    for i, p in enumerate(cadastro):
+        print(f' {i + 1:<4}{p["NovPess"]:46}{p["Idade"]} Anos')

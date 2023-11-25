@@ -1,16 +1,24 @@
 from pacote import cores
 
-def titulo(msg, tam = 20, char = '-='):
+def linha(tam = 30, char = '-='):
+    '''
+    Escreve uma linha com tamanho e caracteres personalizaveis.
+    :tam: Configura o tamanho da linha
+    :char: Configura os caracteres que formaram a linha
+    :return: Retorna a linha com os parametros configurados acima.
+    '''
+    print(f'{cores.roxo()}{char}{cores.padrão()}' * tam)
+
+def titulo(msg, tam = 60):
     '''
     Escreve um cabeçalho padronizado com cores.
     :msg: Texto do título
     :tam: Tamanho horizontal do título
-    :char: Parametro opcional para aplicar estilo de título
     :return: Sem retorno de valores
     '''
-    print(f'{cores.roxo()}{char}{cores.padrão()}' * 20)
+    linha()
     print(f'{cores.bold()}{msg}'.center(tam))
-    print(f'{cores.roxo()}{char}{cores.padrão()}' * 20)
+    linha()
 
 def menu():
     '''
@@ -20,4 +28,4 @@ def menu():
     print(f'{cores.azul()}{"[ 1 ] - ":7}{"Lista de cadastrados":25}')
     print(f'{"[ 2 ] - ":7}{"Cadastrar uma pessoa":25}')
     print(f'{"[ 3 ] - ":7}{"Sair do Sistema":25}{cores.padrão()}')
-    print(f'{cores.roxo()}-={cores.padrão()}' * 20)
+    linha()
