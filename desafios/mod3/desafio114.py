@@ -1,4 +1,5 @@
-import 
+import urllib
+import urllib.request
 
 forms = {
     'limpa': '\033[m',
@@ -7,7 +8,13 @@ forms = {
 }
 
 try:
-    print(f'{forms["verde"]}Consegui acessar o site Pudim com sucesso!{forms["limpa"]}')
+    site = urllib.request.urlopen('http://www.pudim.com.br')
 
-except:
-    print(f'{forms["vermelho"]}O site Pudim não está acessível no momento.{forms["limpa"]}')
+except urllib.error.URLError:
+    print(f'''{forms["vermelho"]}
+          O site Pudim não está acessível no momento.
+          {forms["limpa"]}''')
+else:
+    print(f'''{forms["verde"]}
+          Consegui acessar o site Pudim com sucesso!
+          {forms["limpa"]}''')
