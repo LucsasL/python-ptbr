@@ -7,5 +7,8 @@ def bold():
 def roxo():
     return '\033[1;35m'
 
+def vermelho():
+    return '\033[31m'
+
 def azul():
     return '\033[1;34m'
