@@ -11,7 +11,6 @@ def Titulo(title):
     print(f'{forms["roxo"]}-={forms["limpa"]}' * 30)
 
 def LeiaInt(msg):
-    n = msg
     while True:
         try:
             n = int(input(msg))
@@ -21,12 +20,7 @@ def LeiaInt(msg):
 
         except KeyboardInterrupt:
             print(f'{forms["vermelho"]}... O usuário preferiu não digitar o valor.{forms["limpa"]}')
-
-            try:
-                n = 0
-
-            finally:
-                return n
+            return 0
 
         else:
             return n
@@ -41,12 +35,7 @@ def LeiaFloat(msg):
 
         except KeyboardInterrupt:
             print(f'{forms["vermelho"]}... O usuário preferiu não digitar o valor.{forms["limpa"]}')
-            
-            try:
-                n = 0
-
-            finally:
-                return n
+            return 0
 
         else:
             return n
