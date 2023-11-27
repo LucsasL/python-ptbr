@@ -1,13 +1,14 @@
 from time import sleep
 
+from desafio115 import *
 from pacote import strings
 from pacote import cores
+from pacote.txt import *
 
 opc = ('Ver pessoas cadastradas', 'Adicionar cadastro', 'Sair do sistema')
-cadastro = []
 Pessoa = {}
 
-def AnaliseEsc():
+def analiseEsc():
     while True:
         try:
             Esc = int(input('>>> Escolha: '))
@@ -17,35 +18,31 @@ def AnaliseEsc():
 
         else:
             if Esc == 1:
-                Lista()
+                lerArq()
 
             elif Esc == 2:
                 try:
                     strings.titulo('CADASTRAR NOVAS PESSOAS')
-                    Pessoa['NovPess'] = str(input('>>> Digite o nome: ')).strip().capitalize()
-                    Pessoa['Idade'] = int(input(f'>>> Digite a idade de {Pessoa["NovPess"]}: '))
+                    Nome = str(input('>>> Digite o nome: ')).strip().capitalize()
+                    Idade = int(input(f'>>> Digite a idade de {Pessoa["NovPess"]}: '))
 
-                except ValueError:
+                except (ValueError, TypeError):
                     while True:
                         try:
-                            Pessoa['Idade'] = int(input(f'>>> Idade Inválida! Digite um número inteiro valido: '))
+                            Idade = int(input(f'>>> Idade Inválida! Digite um número inteiro valido: '))
 
                         except (ValueError, TypeError):
                             print(f'{cores.vermelho()}... [ERRO] Idade inválida! Digite um número inteiro valido.{cores.padrão()}')
 
                         else:
-                            print(f'... Registro de {Pessoa["NovPess"]} adicionado com sucesso.')
-                            cadastro.append(Pessoa.copy())
-                            del Esc
+                            cadastrar(Nome, Idade)
                             break
 
                 except KeyboardInterrupt:
                     print(f'... Você decidiu não digitar dados.')
-
+                          
                 else:
-                    print(f'... Registro de {Pessoa["NovPess"]} adicionado com sucesso.')
-                    cadastro.append(Pessoa.copy())
-                    del Esc
+                    cadastrar(Nome, Idade)
                 
             elif Esc == 3:
                 break
@@ -58,10 +55,26 @@ def AnaliseEsc():
 
     strings.titulo('VOLTE SEMPRE!')
 
+def cadastrar(arq = 'Cadastrados.txt', nome = 'Desconhecido', idade = 0):
+    count = 1
+    try:
+        a = open(arq, 'at')
+    
+    except:
+        print('... Houve um ERRO na abertura do arquivo!')
 
-def Lista():
-    strings.titulo('PESSOAS CADASTRADAS')
-    print(f'{"Ind.":5}{"Nome":45}{"Idade":^10}')
-    strings.linha(60, '-')
-    for i, p in enumerate(cadastro):
-        print(f' {i + 1:<4}{p["NovPess"]:46}{p["Idade"]} Anos')
+    else:
+        try:
+            a.write = f'{count:5}{nome:45}{idade:^10}'
+
+        except:
+            print(f'... Houve um ERRO na implementação dos dados.')
+
+        else:
+            print(f'... Registro de {nome} adicionado com sucesso.')
+            count += 1
+            a.close()
+
+    finally:
+        del Esc
+        a.close()
