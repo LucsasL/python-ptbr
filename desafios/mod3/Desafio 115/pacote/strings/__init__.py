@@ -20,12 +20,11 @@ def titulo(msg, tam = 60):
     print(f'{cores.bold()}{msg}'.center(tam))
     linha()
 
-def menu():
+def menu(opc):
     '''
     Escreve uma tabela de opções do usuário.
     '''
     titulo('MENU PRINCIPAL')
-    print(f'{cores.azul()}{"[ 1 ] - ":7}{"Lista de cadastrados":25}')
-    print(f'{"[ 2 ] - ":7}{"Cadastrar uma pessoa":25}')
-    print(f'{"[ 3 ] - ":7}{"Sair do Sistema":25}{cores.padrão()}')
+    for i, o in enumerate(opc):
+        print(f'{cores.azul()}[ {i + 1} ] - {o:25}{cores.padrão()}')
     linha()

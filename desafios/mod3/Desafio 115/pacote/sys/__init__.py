@@ -2,8 +2,8 @@ from time import sleep
 
 from pacote import strings
 from pacote import cores
-from pacote import sys
 
+opc = ('Ver pessoas cadastradas', 'Adicionar cadastro', 'Sair do sistema')
 cadastro = []
 Pessoa = {}
 
@@ -54,7 +54,7 @@ def AnaliseEsc():
                 print(f'{cores.vermelho()}... [ERRO] Não há {Esc}° escolha. Selecione uma opção valida: {cores.padrão()}')
 
         sleep(1)
-        strings.menu()
+        strings.menu(opc)
 
     strings.titulo('VOLTE SEMPRE!')
 
