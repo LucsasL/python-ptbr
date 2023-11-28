@@ -25,13 +25,17 @@ def criarArq(nome):
 def lerArq(nome = 'Cadastrados.txt'):
     try:
         a = open(nome, 'rt')
+        i = 1
     
     except:
         print('... Erro ao ler o arquivo.')
     
     else:
+        i += 1
         titulo('PESSOAS CADASTRADAS')
         print(f'{"Ind.":5}{"Nome":45}{"Idade":^10}')
         linha(60, '-')
-        for i, p in enumerate(a):
-            print(f'{i:5}{a.readlines():45}{f"{a.readlines():^10} anos"}')
+        for i, linhas in enumerate(a):
+            dado = linhas.split(';')
+            dado[1] = dado[1].replace('\n', '')
+            print(f'{i + 1:^5}{dado[0]:<45}{dado[1]:} anos')

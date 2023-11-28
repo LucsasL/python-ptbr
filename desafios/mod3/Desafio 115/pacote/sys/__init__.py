@@ -1,6 +1,5 @@
 from time import sleep
 
-from desafio115 import *
 from pacote import strings
 from pacote import cores
 from pacote.txt import *
@@ -24,7 +23,7 @@ def analiseEsc():
                 try:
                     strings.titulo('CADASTRAR NOVAS PESSOAS')
                     Nome = str(input('>>> Digite o nome: ')).strip().capitalize()
-                    Idade = int(input(f'>>> Digite a idade de {Pessoa["NovPess"]}: '))
+                    Idade = int(input(f'>>> Digite a idade de {Nome}: '))
 
                 except (ValueError, TypeError):
                     while True:
@@ -36,6 +35,7 @@ def analiseEsc():
 
                         else:
                             cadastrar(Nome, Idade)
+                            del Esc
                             break
 
                 except KeyboardInterrupt:
@@ -43,6 +43,7 @@ def analiseEsc():
                           
                 else:
                     cadastrar(Nome, Idade)
+                    del Esc
                 
             elif Esc == 3:
                 break
@@ -55,7 +56,7 @@ def analiseEsc():
 
     strings.titulo('VOLTE SEMPRE!')
 
-def cadastrar(arq = 'Cadastrados.txt', nome = 'Desconhecido', idade = 0):
+def cadastrar(nome = 'Desconhecido', idade = 0, arq = 'Cadastrados.txt'):
     count = 1
     try:
         a = open(arq, 'at')
@@ -76,5 +77,4 @@ def cadastrar(arq = 'Cadastrados.txt', nome = 'Desconhecido', idade = 0):
             a.close()
 
     finally:
-        del Esc
         a.close()
