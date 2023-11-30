@@ -28,3 +28,7 @@ Muito do que foi observado no curso já foi aprendido por mim no exato momento e
 Muito do que ainda pretendo estudar não será abordado nesse curso, já que os cursos do Curso em Vídeo tem como objetivo convidar novas pessoas a começar os estudos na programação, e não apresentar tudo sobre o universo da tecnologia.
 
 Contudo, muito brevemente acabarei o curso, e um tempo depois passarei a me aprofundar em libs de Python pra me profissionalizar e poder contribuir em projetos aqui no GitHub, no momento, focarei mais em JavaScript, que é mais essencial para o desenvolvimento Web e a área que viso me desenvolver. De aqui em diante, é bem possível que eu passe a atualizar o [Repositório de JavaScript](https://github.com/LucsasL/JavaScript-PTBR) que será onde documentarei meus estudos.
+
+### FINALMENTE!!! Finalização do curso - 30 de Novembro de 2023
+
+Finalmente é a palavra de hoje, depois de longos meses estudando Python, cheguei a conclusão. Embora eu tenha demorado muito pra conclui-lo (por conta dos mais de 100 desafios), eu consegui fazer a majoritaria parte dos desafios sozinho, apenas tendo problemas em questões relacionadas a libs e algoritmos mais relacionados com matemática. Agora, basta finalizar o desafio 115 por completo (coisa que ainda não aconteceu) e então partirei a me aprofundar mais nas linguagens que estudei, lendo documentações e aprimorando projetos. :D
