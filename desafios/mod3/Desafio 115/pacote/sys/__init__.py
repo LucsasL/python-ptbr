@@ -57,7 +57,6 @@ def analiseEsc():
     strings.titulo('VOLTE SEMPRE!')
 
 def cadastrar(nome = 'Desconhecido', idade = 0, arq = 'Cadastrados.txt'):
-    count = 1
     try:
         a = open(arq, 'at')
     
@@ -66,15 +65,13 @@ def cadastrar(nome = 'Desconhecido', idade = 0, arq = 'Cadastrados.txt'):
 
     else:
         try:
-            a.write = f'{count:5}{nome:45}{idade:^10}'
+            a.write = f'{nome};{idade:}'
 
         except:
             print(f'... Houve um ERRO na implementação dos dados.')
 
         else:
             print(f'... Registro de {nome} adicionado com sucesso.')
-            count += 1
-            a.close()
 
     finally:
         a.close()
