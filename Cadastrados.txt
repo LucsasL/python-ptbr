@@ -1,2 +1,6 @@
-Lucas Lira;18
-José afonso;35
+Lucas lira;18
+Maria luiza;23
+Matheus henrique;2
+Matheus sobral;20
+Gabriel henrique;19
+Ianco parca;17

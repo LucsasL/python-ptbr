@@ -6,6 +6,7 @@ from pacote.txt import *
 
 opc = ('Ver pessoas cadastradas', 'Adicionar cadastro', 'Sair do sistema')
 Pessoa = {}
+arq = 'Cadastrados.txt'
 
 def analiseEsc():
     while True:
@@ -34,7 +35,7 @@ def analiseEsc():
                             print(f'{cores.vermelho()}... [ERRO] Idade inválida! Digite um número inteiro valido.{cores.padrão()}')
 
                         else:
-                            cadastrar(Nome, Idade)
+                            cadastrar(Nome, Idade, arq)
                             del Esc
                             break
 
@@ -65,7 +66,7 @@ def cadastrar(nome = 'Desconhecido', idade = 0, arq = 'Cadastrados.txt'):
 
     else:
         try:
-            a.write = f'{nome};{idade:}'
+            a.write(f'{nome};{idade:}\n')
 
         except:
             print(f'... Houve um ERRO na implementação dos dados.')

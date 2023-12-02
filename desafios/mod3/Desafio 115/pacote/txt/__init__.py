@@ -39,3 +39,6 @@ def lerArq(nome = 'Cadastrados.txt'):
             dado = linhas.split(';')
             dado[1] = dado[1].replace('\n', '')
             print(f'{i + 1:^5}{dado[0]:<45}{dado[1]:} anos')
+        
+    finally:
+        a.close()
